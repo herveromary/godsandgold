@@ -1,0 +1,43 @@
+.selectGift {
+  display: flex;
+  flex-wrap: wrap;
+  text-align: center;
+  justify-content: center;
+}
+
+.offerButton {
+  padding: 8px;
+  background-image: linear-gradient(
+    to bottom right,
+    var(--blue),
+    var(--lightblue)
+  );
+  border-radius: 10px;
+  margin: 16px 8px;
+  width: 6rem;
+  box-shadow: 4px 2px 2px var(--dark);
+}
+
+.offerButton:hover {
+  filter: brightness(80%);
+}
+
+.offerButton p {
+  color: white;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.offerButton img {
+  width: 50px;
+  height: 50px;
+  text-align: right;
+}
+
+h2 {
+  text-align: center;
+  color: var(--dark);
+  font-size: 20px;
+  font-weight: 500;
+  text-transform: uppercase;
+}
