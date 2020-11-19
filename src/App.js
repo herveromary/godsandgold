@@ -1,4 +1,3 @@
-import logo from "./logo.svg";
 import "./App.css";
 import ChooseGod from "./component/CreateRequest/ChooseGod";
 
