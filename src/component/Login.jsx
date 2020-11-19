@@ -2,6 +2,9 @@ import React, { useState, useContext } from 'react';
 import axios from 'axios';
 import { Redirect } from 'react-router-dom';
 import { GGContext } from '../Context';
+import Topbar from '../Reusable/Topbar';
+import '../styles/css/login.css';
+import logo from '../images/logo.webp';
 
 function Login() {
   const [user, setUser] = useContext(GGContext);
@@ -34,32 +37,37 @@ function Login() {
   console.log('user', user);
 
   return (
-    <div className='login_page'>
-      <h2>Login</h2>
-      <p>
-        Lockdown due to Covid - -532 prevents you to make offerings ?
-        GodsandGold is here for youuu
-      </p>
-      <div>
-        <input
-          placeholder='login'
-          type='text'
-          id='login'
-          name='login'
-          onChange={onChange}
-          value={input.login}
-          className='input'
-          required
-        />
-        <div className='form-data'>
-          <button type='button' onClick={() => signIn()}>
-            Sign In
-          </button>
-          <p>{input.userText}</p>
-          {redirect && <Redirect to='/ChooseGod' />}
+    <>
+      {/* <Topbar /> */}
+      <div className='login_page'>
+        <img className='login_logo' src={logo} />
+        <h2 className='login_title'>GodsandGold</h2>
+        <p className='login_app_description'>
+          Can't make offerings because of lockdown amid Covid-546 B.C. ? We got
+          you covered ! LogIn, offer, relax... Dieu vous le rendra.
+        </p>
+        <div className='form'>
+          <input
+            placeholder='login'
+            type='text'
+            id='login'
+            name='login'
+            onChange={onChange}
+            value={input.login}
+            className='input'
+            required
+          />
+          <div className='form-data'>
+            <button type='button' onClick={() => signIn()}>
+              Make an offering !
+            </button>
+            <p className='are_you_a_god'>Are you a God ? Upgrade to Pro plan</p>
+            <p>{input.userText}</p>
+            {redirect && <Redirect to='/ChooseGod' />}
+          </div>
         </div>
       </div>
-    </div>
+    </>
   );
 }
 
