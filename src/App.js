@@ -8,6 +8,8 @@ import ChoosePickUp from "./component/CreateRequest/ChoosePickUp";
 import RequestSummary from "./component/RequestSummary/RequestSummary";
 import "./App.css";
 import "./styles/css/variables.css";
+import "./App.css";
+import "./styles/css/variables.css";
 
 function App() {
   return (
