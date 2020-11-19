@@ -1,0 +1,47 @@
+:root {
+  --light: whitesmoke;
+  --dark: rgb(3, 43, 47);
+  --lightblue: rgb(86, 177, 191);
+  --blue: rgb(8, 112, 138);
+  --red: rgb(215, 58, 49);
+}
+
+body {
+  background-color: var(--light);
+}
+.titleH1PickUp {
+  display: flex;
+  justify-content: center;
+}
+.titleH2PickUp {
+  display: flex;
+  justify-content: center;
+}
+.calendar {
+  display: flex;
+  justify-content: center;
+}
+.formPickUp {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.inputPickUp {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin: 15px;
+  width: 200px;
+  height: 40px;
+  border-radius: 10px;
+}
+.buttonPickUp {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 200px;
+  height: 40px;
+  border-radius: 10px;
+  background-color: var(--lightblue);
+}
