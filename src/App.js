@@ -1,10 +1,11 @@
-import logo from './logo.svg';
-import './App.css';
+import logo from "./logo.svg";
+import "./App.css";
+import ChooseGod from "./component/CreateRequest/ChooseGod";
 
 function App() {
   return (
-    <div className='App'>
-      <h1>GodsAndGold</h1>
+    <div className="App">
+      <ChooseGod />
     </div>
   );
 }
