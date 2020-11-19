@@ -5,3 +5,8 @@
   --blue: rgb(8, 112, 138);
   --red: rgb(215, 58, 49);
 }
+
+@font-face {
+  font-family: "Gelios";
+  src: url("../assets/gelio.fasolada.ttf") format("truetype");
+}
