@@ -4,4 +4,6 @@
   --lightblue: #d7f3f8;
   --blue: rgb(8, 112, 138);
   --red: rgb(215, 58, 49);
+  margin: 0;
+  padding: 0;
 }

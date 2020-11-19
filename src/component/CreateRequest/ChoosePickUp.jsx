@@ -3,6 +3,7 @@ import { useState } from "react";
 import Calendar from "react-calendar";
 import "../../styles/css/ChoosePickUp.css";
 import "react-calendar/dist/Calendar.css";
+import Topbar from "../../Reusable/Topbar";
 
 const RecapBlock = ({ recapBlock }) => {
   return (
@@ -33,35 +34,38 @@ const PickUp = ({ location }) => {
   };
 
   return (
-    <div>
-      <h1 className='titleH1PickUp'>Prepare your offering</h1>
-      <RecapBlock recapBlock={recap} />
-      <h2 className='titleH2PickUp'>Pick up time</h2>
-      <form className='formPickUp' onSubmit={handleSubmit}>
-        <div className='calendar'>
-          <Calendar
-            className='customCalendar'
-            onChange={setDate}
-            value={date}
-          />
-        </div>
-        <div className='formInput'>
-          <label htmlfor='address'>Address</label>
-          <input
-            name='address'
-            id='address'
-            className='inputPickUp'
-            type='text'
-            placeholder='Efpolidos Street, Athens'
-            value={address}
-            onChange={handleChange}
-          />
-        </div>
-        <button className='buttonPickUp' type='submit'>
-          Send
-        </button>
-      </form>
-    </div>
+    <>
+      <Topbar />
+      <div>
+        <h1 className='titleH1PickUp'>Prepare your offering</h1>
+        <RecapBlock recapBlock={recap} />
+        <h2 className='titleH2PickUp'>Pick up time</h2>
+        <form className='formPickUp' onSubmit={handleSubmit}>
+          <div className='calendar'>
+            <Calendar
+              className='customCalendar'
+              onChange={setDate}
+              value={date}
+            />
+          </div>
+          <div className='formInput'>
+            <label htmlfor='address'>Address</label>
+            <input
+              name='address'
+              id='address'
+              className='inputPickUp'
+              type='text'
+              placeholder='Efpolidos Street, Athens'
+              value={address}
+              onChange={handleChange}
+            />
+          </div>
+          <button className='buttonPickUp' type='submit'>
+            Send
+          </button>
+        </form>
+      </div>
+    </>
   );
 };
 
