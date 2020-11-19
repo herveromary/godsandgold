@@ -1,0 +1,30 @@
+.tab {
+  color: var(--red);
+  text-decoration: none;
+  border: solid 1px var(--red);
+  width: 25vw;
+  padding: 8px;
+  margin-top: 16px;
+}
+
+.tab:hover {
+  color: var(--light);
+  background-color: var(--red);
+}
+
+.validTab {
+  color: var(--light);
+  text-decoration: none;
+  border: solid 1px var(--red);
+  width: 25vw;
+  padding: 8px;
+  margin-top: 16px;
+  background-color: var(--red);
+}
+
+.fullBar {
+  display: flex;
+  text-align: center;
+  position: relative;
+  bottom: 0;
+}

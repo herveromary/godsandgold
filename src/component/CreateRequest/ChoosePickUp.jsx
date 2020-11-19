@@ -33,7 +33,7 @@ const PickUp = ({ location }) => {
   };
 
   return (
-    <div>
+    <div className="pickup">
       <h1 className="titleH1PickUp">Prepare your offering</h1>
       <RecapBlock recapBlock={recap} />
       <h2 className="titleH2PickUp">Pick up time</h2>

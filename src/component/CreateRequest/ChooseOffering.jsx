@@ -1,6 +1,5 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
-
+import { Link, useLocation } from "react-router-dom";
 import "../../styles/css/ChooseOffering.css";
 
 import fruit from "../../styles/fruits.png";
@@ -10,8 +9,10 @@ import jewels from "../../styles/diamond.png";
 import wine from "../../styles/barrel.png";
 import coin from "../../styles/coins.png";
 
-const ChooseOffering = () => {
+const ChooseOffering = ({ page, setPage, location }) => {
   const [offering, setOffering] = useState("");
+  location = useLocation();
+  console.log(location.pathname);
 
   return (
     <div className="offeringpage">
