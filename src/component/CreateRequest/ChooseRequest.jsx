@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import RequestContext from "./RequestContext";
 import "../../styles/css/ChooseRequest.css";
 
@@ -9,11 +9,9 @@ const ChooseRequest = () => {
     setrequest(e.target.value);
   };
 
-  const requestContextValue = request;
-
   const handleOnSubmit = (e) => {
     e.preventDefault();
-    return requestContextValue;
+    localStorage.setItem("request", request);
   };
 
   return (
