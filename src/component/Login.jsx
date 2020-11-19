@@ -18,21 +18,20 @@ function Login() {
     });
   };
 
+  //console.log(input);
+
   const signIn = () => {
-    console.log('signin');
-    setUser(input);
-    // axios
-    //   .get('https://hookspendables.herokuapp.com/api/users/')
-    //   .then((response) => response.data)
-    //   .then((data) => setUser(data));
-    //.then((data) => console.log(data));
-    //.then((data) => data.filter((user) => user.login) === input.login)
-    // .then((data) => data.filter((user) => console.log(user.login))
-    //   .then((data) => setUser(data[0]))
-    //   .then(() => setRedirect(false));
+    setUser({ input });
+    //     axios
+    //       .get(`https://hookspendables.herokuapp.com/api/users/`, {user.login})
+    //       .then((response) => response.data)
+    //       .then((data) => data.filter((user) => user.login) === input.login)
+    //       //   .then((data) => data.filter((user) => console.log(user.login)))
+    //       .then((data) => setUser(data[0]));
+    //     //   .then(() => setRedirect(false));
   };
 
-  console.log(user);
+  console.log('user', user);
 
   return (
     <div className='login_page'>

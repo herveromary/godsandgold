@@ -1,0 +1,9 @@
+.topBar {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  display: flex;
+  justify-content: space-between;
+  background: rgb(43, 58, 68);
+  transition: 0.2s;
+}
