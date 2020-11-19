@@ -41,3 +41,8 @@ h2 {
   font-weight: 500;
   text-transform: uppercase;
 }
+
+a.offerButton {
+  text-decoration: none;
+  color: white;
+}

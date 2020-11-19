@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 
 import "../../styles/css/ChooseOffering.css";
 
@@ -11,46 +12,62 @@ import coin from "../../styles/coins.png";
 
 const ChooseOffering = () => {
   const [offering, setOffering] = useState("");
-  console.log(offering);
 
   return (
     <div className="offeringpage">
       <h2> What do you want to offer ? </h2>
       <div className="selectGift">
-        <div
-          className="offerButton"
-          onClick={() => setOffering("a galleon of wine")}>
+        <Link
+          to={{
+            pathname: `/choosepickup`,
+            state: { offering: "a galleon of wine" },
+          }}
+          className="offerButton">
           <p> Galleon of wine</p>
           <img src={wine} alt="wine"></img>
-        </div>
-        <div
-          className="offerButton"
-          onClick={() => setOffering("an animal for sacrifice")}>
+        </Link>
+        <Link
+          to={{
+            pathname: `/choosepickup`,
+            state: { offering: "an animal for sacrifice" },
+          }}
+          className="offerButton">
           <p> Sacrificial Animal</p>
           <img src={animal} alt="animal"></img>
-        </div>
-        <div
-          className="offerButton"
-          onClick={() => setOffering("a member of your family")}>
+        </Link>
+        <Link
+          to={{
+            pathname: `/choosepickup`,
+            state: { offering: "a member of your family" },
+          }}
+          className="offerButton">
           <p> Family Member</p>
           <img src={family} alt="family"></img>
-        </div>
-        <div
-          className="offerButton"
-          onClick={() => setOffering("a basket full of appetizing fruits")}>
+        </Link>
+        <Link
+          to={{
+            pathname: `/choosepickup`,
+            state: { offering: "an appetizing basket full of fruits" },
+          }}
+          className="offerButton">
           <p> Fruit basket</p>
           <img src={fruit} alt="fruits"></img>
-        </div>
-        <div className="offerButton" onClick={() => setOffering("money")}>
+        </Link>
+        <Link
+          to={{ pathname: `/choosepickup`, state: { offering: "money" } }}
+          className="offerButton">
           <p> Oboli</p>
           <img src={coin} alt="coins"></img>
-        </div>
-        <div
-          className="offerButton"
-          onClick={() => setOffering("precious and beautiful jewels")}>
+        </Link>
+        <Link
+          to={{
+            pathname: `/choosepickup`,
+            state: { offering: "precious and beautiful jewels" },
+          }}
+          className="offerButton">
           <p> Jewelry</p>
           <img src={jewels} alt="diamonds"></img>
-        </div>
+        </Link>
       </div>
     </div>
   );
