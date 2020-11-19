@@ -39,16 +39,24 @@ const PickUp = ({ location }) => {
       <h2 className="titleH2PickUp">Pick up time</h2>
       <form className="formPickUp" onSubmit={handleSubmit}>
         <div className="calendar">
-          <Calendar onChange={setDate} value={date} />
+          <Calendar
+            className="customCalendar"
+            onChange={setDate}
+            value={date}
+          />
         </div>
-        <input
-          name="address"
-          className="inputPickUp"
-          type="text"
-          placeholder="Address"
-          value={address}
-          onChange={handleChange}
-        />
+        <div className="formInput">
+          <label htmlfor="address">Address</label>
+          <input
+            name="address"
+            id="address"
+            className="inputPickUp"
+            type="text"
+            placeholder="Efpolidos Street, Athens"
+            value={address}
+            onChange={handleChange}
+          />
+        </div>
         <button className="buttonPickUp" type="submit">
           Send
         </button>

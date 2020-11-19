@@ -1,7 +1,7 @@
 :root {
-  --light: rgb(208, 211, 197);
+  --light: whitesmoke;
   --dark: rgb(3, 43, 47);
-  --lightblue: rgb(86, 177, 191);
+  --lightblue: #d7f3f8;
   --blue: rgb(8, 112, 138);
   --red: rgb(215, 58, 49);
 }
