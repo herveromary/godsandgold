@@ -1,12 +1,13 @@
 import React from "react";
 import { Switch, Route } from "react-router-dom";
-
 import Login from "./component/Login";
 import ChooseGod from "./component/CreateRequest/ChooseGod";
 import ChooseRequest from "./component/CreateRequest/ChooseRequest";
 import ChooseOffering from "./component/CreateRequest/ChooseOffering";
 import ChoosePickUp from "./component/CreateRequest/ChoosePickUp";
 import RequestSummary from "./component/RequestSummary/RequestSummary";
+import "./App.css";
+import "./styles/css/variables.css";
 
 function App() {
   return (
