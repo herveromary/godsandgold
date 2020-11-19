@@ -14,12 +14,12 @@ function App() {
   return (
     <div>
       <Switch>
-        <Route exact path="/" component={Login} />
-        <Route path="/choosegod" component={ChooseGod} />
-        <Route path="/chooserequest" component={ChooseRequest} />
-        <Route path="/chooseoffering" component={ChooseOffering} />
-        <Route path="/choosepickup" component={ChoosePickUp} />
-        <Route path="/requestsummary" component={RequestSummary} />
+        <Route exact path='/' component={Login} />
+        <Route path='/choosegod' component={ChooseGod} />
+        <Route path='/chooserequest' component={ChooseRequest} />
+        <Route path='/chooseoffering' component={ChooseOffering} />
+        <Route path='/choosepickup' component={ChoosePickUp} />
+        <Route path='/requestsummary' component={RequestSummary} />
       </Switch>
       <BottomNav />
     </div>
