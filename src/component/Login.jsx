@@ -23,9 +23,10 @@ function Login() {
     axios
       .get('https://hookspendables.herokuapp.com/api/users/')
       .then((response) => response.data)
-      .then((data) => console.log(data[0].input));
-
-    //   .then((data) => data.filter((user) => user.login) === input.login)
+      .then((data) => setUser(data));
+    //.then((data) => console.log(data));
+    //.then((data) => data.filter((user) => user.login) === input.login)
+    // .then((data) => data.filter((user) => console.log(user.login))
     //   .then((data) => setUser(data[0]))
     //   .then(() => setRedirect(false));
   };
