@@ -27,7 +27,27 @@ const ChooseRequest = () => {
         />
         <button type='submit'>Confirm</button>
       </form>
-      <h3 className='mostCommonRequests-title'>Most common requests</h3>
+      <h3 className='mostCommonRequests-title'>Most common requests :</h3>
+      <div className='diagram-box'>
+        <div class='diagram-bar'>
+          <div class='diagram-1'>
+            <span class='request'></span>
+            <span class='PercentText '>90%</span>
+          </div>
+        </div>
+        <div class='diagram-bar'>
+          <div class='diagram-2'>
+            <span class='request'></span>
+            <span class='PercentText '>69%</span>
+          </div>
+        </div>
+        <div class='diagram-bar'>
+          <div class='diagram-3'>
+            <span class='request'></span>
+            <span class='PercentText '>52%</span>
+          </div>
+        </div>
+      </div>
     </div>
   );
 };
