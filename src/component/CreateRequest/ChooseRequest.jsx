@@ -1,5 +1,4 @@
-import React, { useState, useContext } from "react";
-import RequestContext from "./RequestContext";
+import React, { useState } from "react";
 import "../../styles/css/ChooseRequest.css";
 
 const ChooseRequest = () => {
