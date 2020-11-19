@@ -1,6 +1,11 @@
+@import "./styles/css/variables.css";
+
 .App {
-  font-family: "Roboto", "sans-serif";
+    font-family: 'Roboto', 'Sans Serif';
+    background-image: linear-gradient(to right top, #d0d3c5, #bfcdba, #aac7b4, #93c1b3, #79bbb6, #66acac, #539ca2, #408d98, #30737c, #205a61, #114247, #032b2f);
+    height: 100vh;
 }
+
 body {
   background-color: var(--light);
 }

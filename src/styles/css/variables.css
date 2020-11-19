@@ -1,5 +1,6 @@
 :root {
-  --light: whitesmoke;
+  --verylight: whitesmoke;
+  --light: rgb(208,211,197);
   --dark: rgb(3, 43, 47);
   --lightblue: #d7f3f8;
   --blue: rgb(8, 112, 138);
