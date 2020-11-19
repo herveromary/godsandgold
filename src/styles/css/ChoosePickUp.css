@@ -1,7 +1,7 @@
 :root {
   --light: whitesmoke;
   --dark: rgb(3, 43, 47);
-  --lightblue: rgb(86, 177, 191);
+  --lightblue: #d7f3f8;
   --blue: rgb(8, 112, 138);
   --red: rgb(215, 58, 49);
 }
@@ -9,9 +9,21 @@
 body {
   background-color: var(--light);
 }
+
 .titleH1PickUp {
   display: flex;
   justify-content: center;
+}
+.textsChoosePickUp {
+  margin: 0 auto;
+  padding: 15px 30px;
+  max-width: 300px;
+  color: var(--blue);
+  background-color: var(--lightblue);
+  border-radius: 20px;
+}
+.textPickUp {
+  display: flex;
 }
 .titleH2PickUp {
   display: flex;
@@ -43,5 +55,6 @@ body {
   width: 200px;
   height: 40px;
   border-radius: 10px;
+  color: var(--blue);
   background-color: var(--lightblue);
 }

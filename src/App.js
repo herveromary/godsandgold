@@ -11,6 +11,8 @@ import "./styles/css/variables.css";
 import "./App.css";
 import "./styles/css/variables.css";
 
+import "./App.css";
+
 function App() {
   return (
     <div>
