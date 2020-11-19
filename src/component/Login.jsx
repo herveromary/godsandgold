@@ -20,16 +20,19 @@ function Login() {
 
   const signIn = () => {
     console.log('signin');
-    axios
-      .get('https://hookspendables.herokuapp.com/api/users/')
-      .then((response) => response.data)
-      .then((data) => setUser(data));
+    setUser(input);
+    // axios
+    //   .get('https://hookspendables.herokuapp.com/api/users/')
+    //   .then((response) => response.data)
+    //   .then((data) => setUser(data));
     //.then((data) => console.log(data));
     //.then((data) => data.filter((user) => user.login) === input.login)
     // .then((data) => data.filter((user) => console.log(user.login))
     //   .then((data) => setUser(data[0]))
     //   .then(() => setRedirect(false));
   };
+
+  console.log(user);
 
   return (
     <div className='login_page'>
