@@ -33,8 +33,7 @@ const PickUp = ({ location }) => {
     setAddress(event.target.value);
   };
 
-  return (
-    <>
+  return (<>
       <Topbar />
       <div>
         <h1 className='titleH1PickUp'>Prepare your offering</h1>
