@@ -1,0 +1,236 @@
+.ChooseRequest {
+  min-height: 100vh;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  overflow: hidden;
+}
+
+.chooseRequest-title {
+  background-color: var(--lightblue);
+  text-align: center;
+  padding: 16px;
+  width: 100%;
+  margin: 0;
+}
+
+.chooseRequest-form {
+  width: 100%;
+  max-width: 500px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+#requestChoice {
+  width: 69%;
+  height: 100px;
+  border-radius: 8px;
+  padding: 16px;
+  resize: none;
+  outline: none;
+  font-size: 1.1em;
+  font-family: inherit;
+}
+
+.ChooseRequest button {
+  margin: 24px 0;
+  border-radius: 8px;
+  padding: 16px 0;
+  width: 69%;
+  border-color: transparent;
+  background-color: var(--blue);
+  color: var(--light);
+  font-size: 1.1em;
+  transition: all 0.3s ease-in-out;
+}
+
+.ChooseRequest button:hover {
+  opacity: 0.8;
+}
+
+.diagram-box {
+  font-size: 20px;
+  width: 80%;
+  height: auto;
+  margin: 24px auto;
+  background-color: #fff;
+  border: 1px solid #cdcdcd;
+  padding: 10px;
+  border-radius: 8px;
+  -o-border-radius: 8px;
+  -webkit-border-radius: 8px;
+  -ms-border-radius: 8px;
+  -moz-border-radius: 8px;
+}
+
+.diagram-bar {
+  width: 90%;
+  height: 50px;
+  position: relative;
+  background: rgba(17, 17, 17, 0.3);
+  margin: 20px auto;
+  border-radius: 4px;
+  -o-border-radius: 4px;
+  -webkit-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -moz-border-radius: 4px;
+}
+
+.diagram-1 {
+  width: 90%;
+  animation: Animate-1 4s;
+  -webkit-animation: Animate-1 4s;
+  -moz-animation: Animate-1 4s;
+  -o-animation: Animate-1 4s;
+  height: 50px;
+  position: absolute;
+  background-color: #ea8564;
+  border-radius: 4px;
+  -o-border-radius: 4px;
+  -webkit-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -moz-border-radius: 4px;
+}
+@keyframes Animate-1 {
+  from {
+    width: 10px;
+  }
+  to {
+    width: 90%;
+  }
+}
+@-webkit-keyframes Animate-1 {
+  from {
+    width: 10px;
+  }
+  to {
+    width: 90%;
+  }
+}
+@-moz-keyframes Animate-1 {
+  from {
+    width: 10px;
+  }
+  to {
+    width: 90%;
+  }
+}
+@-o-keyframes Animate-1 {
+  from {
+    width: 10px;
+  }
+  to {
+    width: 90%;
+  }
+}
+
+.diagram-2 {
+  animation: Animate-2 5s;
+  -webkit-animation: Animate-2 5s;
+  -moz-animation: Animate-2 5s;
+  -o-animation: Animate-2 5s;
+  width: 69%;
+  height: 50px;
+  position: absolute;
+  background-color: #55a69f;
+  border-radius: 4px;
+  -o-border-radius: 4px;
+  -webkit-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -moz-border-radius: 4px;
+}
+@keyframes Animate-2 {
+  from {
+    width: 10px;
+  }
+  to {
+    width: 69%;
+  }
+}
+@-webkit-keyframes Animate-2 {
+  from {
+    width: 10px;
+  }
+  to {
+    width: 69%;
+  }
+}
+@-moz-keyframes Animate-2 {
+  from {
+    width: 10px;
+  }
+  to {
+    width: 69%;
+  }
+}
+@-o-keyframes Animate-2 {
+  from {
+    width: 10px;
+  }
+  to {
+    width: 69%;
+  }
+}
+
+.diagram-3 {
+  animation: Animate-3 5s;
+  -webkit-animation: Animate-3 5s;
+  -moz-animation: Animate-3 5s;
+  -o-animation: Animate-3 5s;
+  width: 52%;
+  height: 50px;
+  position: absolute;
+  background-color: #99856d;
+  border-radius: 4px;
+  -o-border-radius: 4px;
+  -webkit-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -moz-border-radius: 4px;
+}
+@keyframes Animate-3 {
+  from {
+    width: 10px;
+  }
+  to {
+    width: 52%;
+  }
+}
+@-webkit-keyframes Animate-3 {
+  from {
+    width: 10px;
+  }
+  to {
+    width: 52%;
+  }
+}
+@-moz-keyframes Animate-3 {
+  from {
+    width: 10px;
+  }
+  to {
+    width: 52%;
+  }
+}
+@-o-keyframes Animate-3 {
+  from {
+    width: 10px;
+  }
+  to {
+    width: 52%;
+  }
+}
+
+.PercentText {
+  z-index: 3;
+  position: relative;
+  padding-right: 15px;
+  margin-top: 15px;
+  float: right;
+  text-shadow: none;
+  color: #fff;
+  font-size: 18px;
+}
