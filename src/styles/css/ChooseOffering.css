@@ -60,7 +60,7 @@
   text-align: right;
 }
 
-h2 {
+.offering-title {
   text-align: center;
   color: var(--dark);
   background-color: var(--lightblue);

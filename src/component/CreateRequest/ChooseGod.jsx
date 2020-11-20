@@ -1,18 +1,21 @@
-import { useState, useEffect } from 'react';
-import { useHistory } from 'react-router-dom';
-import Slider from 'react-slick';
-import BottomNav from '../../Reusable/BottomNav';
-import '../../styles/css/ChooseGod.css';
-import gods from './godsArray';
-import TextTransition, { presets } from 'react-text-transition';
-import axios from 'axios';
+import { useState, useEffect } from "react";
+import { useHistory } from "react-router-dom";
+import Slider from "react-slick";
+import BottomNav from "../../Reusable/BottomNav";
+import "../../styles/css/ChooseGod.css";
+import gods from "./godsArray";
+import TextTransition, { presets } from "react-text-transition";
+import axios from "axios";
+
+const userName = localStorage.getItem("user");
 
 const TEXTS = [
-  'Choose Your God',
-  'Make your request',
-  'Make an offering',
-  'We may make your',
-  'wishes come true!',
+  `Hello ${userName}`,
+  "Choose Your God",
+  "Make your request",
+  "Make an offering",
+  "We may make your",
+  "wishes come true!",
 ];
 
 const ChooseGod = () => {
@@ -32,14 +35,14 @@ const ChooseGod = () => {
 
   const handleClick = (e) => {
     const choosenGod = gods.filter((god) => god.name === e.target.alt);
-    localStorage.setItem('choosenGod', JSON.stringify(choosenGod[0]));
-    history.push('/chooserequest');
+    localStorage.setItem("choosenGod", JSON.stringify(choosenGod[0]));
+    history.push("/chooserequest");
   };
 
   useEffect(() => {
     const intervalId = setInterval(
       () => setIndex((index) => index + 1),
-      3000 // every 3 seconds
+      1500 // every 3 seconds
     );
   }, []);
 
@@ -53,23 +56,23 @@ const ChooseGod = () => {
   }, []); */
 
   return (
-    <div className='container-god-slide'>
-      <h2 className='gods-slide-title'>
+    <div className="container-god-slide">
+      <h3 className="gods-slide-title">
         <TextTransition
           text={TEXTS[index % TEXTS.length]}
           springConfig={presets.wobbly}
         />
-      </h2>
+      </h3>
       <Slider {...settings}>
         {gods.map((god) => (
-          <div key={god.id} className='god-slide'>
+          <div key={god.id} className="god-slide">
             <img
               onClick={handleClick}
-              className='god-slide-image'
+              className="god-slide-image"
               src={god.picture}
               alt={god.name}
             />
-            <h3 className='god-slide-name'>{god.name}</h3>
+            <h3 className="god-slide-name">{god.name}</h3>
           </div>
         ))}
       </Slider>
