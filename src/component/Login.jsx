@@ -1,14 +1,15 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect } from "react";
 
-import { Redirect } from 'react-router-dom';
+import { Redirect } from "react-router-dom";
 
-import '../styles/css/login.css';
-import logo from '../images/logo.webp';
-import TextTransition, { presets } from 'react-text-transition';
+import "../styles/css/login.css";
+import logo from "../images/logo.webp";
+import TextTransition, { presets } from "react-text-transition";
+import axios from "axios";
 
 function Login() {
   const [redirect, setRedirect] = useState(false);
-  const [user, setUser] = useState('');
+  const [user, setUser] = useState("");
   //let history = useHistory();
   /*   const [input, setInput] = useState({
     login: '',
@@ -21,15 +22,26 @@ function Login() {
   };
 
   const signIn = () => {
-    localStorage.setItem('user', JSON.stringify(user));
+    const u = {
+      login: user,
+      password: "123456",
+      email: "default@email.com",
+    };
+    axios.post("http://localhost:3000/api/users", u).then((data) => {
+      axios
+        .get(`http://localhost:3000/api/users/by_name/${user}`)
+        .then((response) =>
+          localStorage.setItem("user", JSON.stringify(response.data))
+        );
+    });
     setRedirect(true);
   };
 
   const TEXTS = [
-    'Choose Your God',
-    'Make your request',
-    'Make an offering',
-    'wishes come true!',
+    "Choose Your God",
+    "Make your request",
+    "Make an offering",
+    "wishes come true!",
   ];
 
   const [index, setIndex] = useState(0);
@@ -43,39 +55,39 @@ function Login() {
 
   return (
     <>
-      <div className='login_page'>
+      <div className="login_page">
         <img
-          className='login_logo'
+          className="login_logo"
           src={logo}
-          alt='homme invoquant les dieux autour du feu'
+          alt="homme invoquant les dieux autour du feu"
         />
-        <h2 className='login-slide-title'>
+        <h2 className="login-slide-title">
           <TextTransition
             text={TEXTS[index % TEXTS.length]}
             springConfig={presets.wobbly}
           />
         </h2>
-        <p className='login_app_description'>
+        <p className="login_app_description">
           Can't make offerings because of lockdown amid Covid-546 B.C. ? We got
           you covered ! LogIn, offer, relax... Dieu vous le rendra.
         </p>
-        <div className='form'>
+        <div className="form">
           <input
-            placeholder='login'
-            type='text'
-            id='login'
-            name='login'
+            placeholder="login"
+            type="text"
+            id="login"
+            name="login"
             value={user}
             onChange={onChange}
-            className='input'
+            className="input"
             required
           />
-          <div className='form-data'>
-            <button type='button' onClick={() => signIn()}>
+          <div className="form-data">
+            <button type="button" onClick={() => signIn()}>
               Make an offering !
             </button>
-            <p className='are_you_a_god'>Are you a God ? Upgrade to Pro plan</p>
-            {redirect && <Redirect to='/ChooseGod' />}
+            <p className="are_you_a_god">Are you a God ? Upgrade to Pro plan</p>
+            {redirect && <Redirect to="/ChooseGod" />}
           </div>
         </div>
       </div>

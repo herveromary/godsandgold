@@ -5,6 +5,7 @@ import "../../styles/css/ChoosePickUp.css";
 import "react-calendar/dist/Calendar.css";
 import RecapCard from "../../Reusable/RecapCard";
 import Topbar from "../../Reusable/Topbar";
+import axios from "axios";
 
 const PickUp = ({ location }) => {
   const { offering } = location.state;
@@ -32,6 +33,19 @@ const PickUp = ({ location }) => {
     setAddress(event.target.value);
   };
 
+  const sendRequest = () => {
+    const user = localStorage.getItem("user");
+    axios.post("http://localhost:3000/api/offerings", {
+      user_id: user.id,
+      god_id: godDetails.id,
+      request: request,
+      offering: offering,
+      date: date,
+      adress: address,
+      status: "pending",
+      user_name: user.login,
+    });
+  };
   return (
     <div className="pickup">
       <Topbar />
@@ -59,7 +73,7 @@ const PickUp = ({ location }) => {
               onChange={handleChange}
             />
           </div>
-          <button className="buttonPickUp" type="submit">
+          <button className="buttonPickUp" type="submit" onClick={sendRequest}>
             Send
           </button>
         </form>

@@ -4,7 +4,7 @@ import "../../styles/css/RequestConfirmation.css";
 import Topbar from "../../Reusable/Topbar";
 
 const RequestConfirmation = ({ state }) => {
-  let userName = localStorage.getItem("user");
+  let userName = localStorage.getItem("user").login;
 
   return (
     <div className="confirm">
