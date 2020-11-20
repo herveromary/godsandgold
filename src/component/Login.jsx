@@ -1,4 +1,3 @@
-
 import React, { useState, useContext, useEffect } from "react";
 import axios from "axios";
 import { Redirect, useHistory } from "react-router-dom";
@@ -15,16 +14,11 @@ const TEXTS = [
   "wishes come true!",
 ];
 
-
 function Login() {
-  const [index, setIndex] = useState(0);
-
-  useEffect(() => {
-    const intervalId = setInterval(() => setIndex((index) => index + 1), 1500);
-  }, []);
-
   const [user, setUser] = useState("");
   const [redirect, setRedirect] = useState(false);
+
+  const [index, setIndex] = useState(0);
 
   //let history = useHistory();
   /*   const [input, setInput] = useState({
@@ -38,7 +32,6 @@ function Login() {
   };
 
   const signIn = () => {
-
     const u = {
       login: user,
       password: "123456",
@@ -61,28 +54,16 @@ function Login() {
     "wishes come true!",
   ];
 
-  const [index, setIndex] = useState(0);
-
-  useEffect(() => {
-    const intervalId = setInterval(
-      () => setIndex((index) => index + 1),
-      4000 // every 3 seconds
-    );
-  }, []);
-
-
   return (
     <>
       {/* <Topbar /> */}
       <div className="login_page">
         <img className="login_logo" src={logo} />
         <h3 className="login_app_description">
-
           <TextTransition
             text={TEXTS[index % TEXTS.length]}
             springConfig={presets.wobbly}
           />
-
         </h3>
 
         <div className="form">
