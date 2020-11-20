@@ -1,0 +1,33 @@
+.globalStatus {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.statusTitle {
+}
+.status-approved {
+  padding: 2px 0 6px 0;
+  color: green;
+  font-size: 60px;
+  font-family: "Fredericka the Great", cursive;
+  border-top: 3px solid green;
+  border-bottom: 3px solid green;
+}
+.status-declined {
+  padding: 4px 0 4px 0;
+  color: red;
+  font-size: 60px;
+  font-family: "Fredericka the Great", cursive;
+  border-top: 3px solid red;
+  border-bottom: 3px solid red;
+}
+.buttonStatus {
+  width: 200px;
+  height: 46px;
+  border-radius: 10px;
+  border: 2px solid var(--lightblue);
+  font-size: 16px;
+  font-weight: bold;
+  color: var(--lightblue);
+  background-color: var(--blue);
+}

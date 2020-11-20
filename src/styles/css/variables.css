@@ -8,3 +8,9 @@
   margin: 0;
   padding: 0;
 }
+
+@font-face {
+  font-family: "Gelios";
+  src: url("../assets/gelio.fasolada.ttf") format("truetype");
+}
+@import url("https://fonts.googleapis.com/css2?family=Fredericka+the+Great&display=swap");

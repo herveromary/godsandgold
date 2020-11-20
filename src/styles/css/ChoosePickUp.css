@@ -1,20 +1,16 @@
-.pickup {
-  height: 90vh;
-}
 
-.titleH1PickUp {
-  display: flex;
-  justify-content: center;
-}
 .textsChoosePickUp {
   margin: 0 auto 30px;
-  padding: 15px 30px;
+  padding: 15px 25px;
   max-width: 300px;
   color: var(--blue);
   background-color: var(--lightblue);
   border-radius: 20px;
 }
-.titleH2PickUp {
+.textPickUpDate {
+  font-family: "Gelios";
+}
+.titleH3PickUp {
   display: flex;
   justify-content: center;
 }
@@ -45,6 +41,15 @@
 .customCalendar .react-calendar__tile--now:enabled:hover,
 .react-calendar__tile--now:enabled:focus {
   background: var(--lightblue);
+}
+.customCalendar .react-calendar__navigation__label::before {
+  content: "Nikossaliagas";
+  font-family: "Gelios";
+  font-size: 20px;
+  letter-spacing: 1px;
+}
+.customCalendar .react-calendar__navigation__label__labelText {
+  display: none;
 }
 .formPickUp {
   display: flex;
