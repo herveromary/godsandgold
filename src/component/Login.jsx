@@ -1,15 +1,15 @@
-import React, { useState, useContext } from "react";
-import axios from "axios";
-import { Redirect, useHistory } from "react-router-dom";
-import { GGContext } from "../Context";
-import Topbar from "../Reusable/Topbar";
-import "../styles/css/login.css";
-import logo from "../images/logo.webp";
+import React, { useState, useEffect } from 'react';
+
+import { Redirect } from 'react-router-dom';
+
+import '../styles/css/login.css';
+import logo from '../images/logo.webp';
+import TextTransition, { presets } from 'react-text-transition';
 
 function Login() {
-  const [user, setUser] = useState();
   const [redirect, setRedirect] = useState(false);
-  let history = useHistory();
+  const [user, setUser] = useState('');
+  //let history = useHistory();
   /*   const [input, setInput] = useState({
     login: '',
     password: '',
@@ -20,48 +20,62 @@ function Login() {
     setUser(e.target.value);
   };
 
-  //console.log(input);
-
   const signIn = () => {
-    localStorage.setItem("user", user);
-    history.push("/choosegod");
-    //     axios
-    //       .get(`https://hookspendables.herokuapp.com/api/users/`, {user.login})
-    //       .then((response) => response.data)
-    //       .then((data) => data.filter((user) => user.login) === input.login)
-    //       //   .then((data) => data.filter((user) => console.log(user.login)))
-    //       .then((data) => setUser(data[0]));
-    //     //   .then(() => setRedirect(false));
+    localStorage.setItem('user', JSON.stringify(user));
+    setRedirect(true);
   };
+
+  const TEXTS = [
+    'Choose Your God',
+    'Make your request',
+    'Make an offering',
+    'wishes come true!',
+  ];
+
+  const [index, setIndex] = useState(0);
+
+  useEffect(() => {
+    const intervalId = setInterval(
+      () => setIndex((index) => index + 1),
+      4000 // every 3 seconds
+    );
+  }, []);
 
   return (
     <>
-      {/* <Topbar /> */}
-      <div className="login_page">
-        <img className="login_logo" src={logo} />
-        <h2 className="login_title">GodsandGold</h2>
-        <p className="login_app_description">
+      <div className='login_page'>
+        <img
+          className='login_logo'
+          src={logo}
+          alt='homme invoquant les dieux autour du feu'
+        />
+        <h2 className='login-slide-title'>
+          <TextTransition
+            text={TEXTS[index % TEXTS.length]}
+            springConfig={presets.wobbly}
+          />
+        </h2>
+        <p className='login_app_description'>
           Can't make offerings because of lockdown amid Covid-546 B.C. ? We got
           you covered ! LogIn, offer, relax... Dieu vous le rendra.
         </p>
-        <div className="form">
+        <div className='form'>
           <input
-            placeholder="login"
-            type="text"
-            id="login"
-            name="login"
+            placeholder='login'
+            type='text'
+            id='login'
+            name='login'
             value={user}
             onChange={onChange}
-            className="input"
+            className='input'
             required
           />
-          <div className="form-data">
-            <button type="button" onClick={() => signIn()}>
+          <div className='form-data'>
+            <button type='button' onClick={() => signIn()}>
               Make an offering !
             </button>
-            <p className="are_you_a_god">Are you a God ? Upgrade to Pro plan</p>
-
-            {redirect && <Redirect to="/ChooseGod" />}
+            <p className='are_you_a_god'>Are you a God ? Upgrade to Pro plan</p>
+            {redirect && <Redirect to='/ChooseGod' />}
           </div>
         </div>
       </div>
