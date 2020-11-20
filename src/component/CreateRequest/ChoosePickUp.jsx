@@ -12,8 +12,11 @@ const PickUp = ({ location }) => {
 
   const [date, setDate] = useState(new Date());
   const [address, setAddress] = useState("");
+  let godDetails = localStorage.getItem("choosenGod");
+  godDetails = JSON.parse(godDetails);
+  let godName = godDetails.name;
   const request = localStorage.getItem("request");
-  const recap = { god: "id", request, offering };
+  const recap = { god: `${godName}`, request, offering };
 
   const history = useHistory();
 
@@ -35,28 +38,28 @@ const PickUp = ({ location }) => {
       <div>
         <h2>Prepare your offering</h2>
         <RecapCard details={recap} />
-        <h3 className="titleH3PickUp">Pick up time</h3>
-        <form className="formPickUp" onSubmit={handleSubmit}>
-          <div className="calendar">
+        <h3 className='titleH3PickUp'>Pick up time</h3>
+        <form className='formPickUp' onSubmit={handleSubmit}>
+          <div className='calendar'>
             <Calendar
-              className="customCalendar"
+              className='customCalendar'
               onChange={setDate}
               value={date}
             />
           </div>
-          <div className="formInput">
-            <label htmlFor="address">Address</label>
+          <div className='formInput'>
+            <label htmlFor='address'>Address</label>
             <input
-              name="address"
-              id="address"
-              className="inputPickUp"
-              type="text"
-              placeholder="Efpolidos Street, Athens"
+              name='address'
+              id='address'
+              className='inputPickUp'
+              type='text'
+              placeholder='Efpolidos Street, Athens'
               value={address}
               onChange={handleChange}
             />
           </div>
-          <button className="buttonPickUp" type="submit">
+          <button className='buttonPickUp' type='submit'>
             Send
           </button>
         </form>

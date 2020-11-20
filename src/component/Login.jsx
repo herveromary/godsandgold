@@ -1,30 +1,30 @@
-import React, { useState, useContext } from 'react';
-import axios from 'axios';
-import { Redirect } from 'react-router-dom';
-import { GGContext } from '../Context';
-import Topbar from '../Reusable/Topbar';
-import '../styles/css/login.css';
-import logo from '../images/logo.webp';
+import React, { useState, useContext } from "react";
+import axios from "axios";
+import { Redirect, useHistory } from "react-router-dom";
+import { GGContext } from "../Context";
+import Topbar from "../Reusable/Topbar";
+import "../styles/css/login.css";
+import logo from "../images/logo.webp";
 
 function Login() {
-  const [user, setUser] = useContext(GGContext);
+  const [user, setUser] = useState();
   const [redirect, setRedirect] = useState(false);
-  const [input, setInput] = useState({
+  let history = useHistory();
+  /*   const [input, setInput] = useState({
     login: '',
     password: '',
     email: '',
-  });
+  }); */
 
   const onChange = (e) => {
-    setInput({
-      [e.target.name]: e.target.value,
-    });
+    setUser(e.target.value);
   };
 
   //console.log(input);
 
   const signIn = () => {
-    setUser({ input });
+    localStorage.setItem("user", user);
+    history.push("/choosegod");
     //     axios
     //       .get(`https://hookspendables.herokuapp.com/api/users/`, {user.login})
     //       .then((response) => response.data)
@@ -33,8 +33,6 @@ function Login() {
     //       .then((data) => setUser(data[0]));
     //     //   .then(() => setRedirect(false));
   };
-
-  console.log('user', user);
 
   return (
     <>
@@ -52,8 +50,8 @@ function Login() {
             type='text'
             id='login'
             name='login'
+            value={user}
             onChange={onChange}
-            value={input.login}
             className='input'
             required
           />
@@ -62,7 +60,7 @@ function Login() {
               Make an offering !
             </button>
             <p className='are_you_a_god'>Are you a God ? Upgrade to Pro plan</p>
-            <p>{input.userText}</p>
+            <p>{user}</p>
             {redirect && <Redirect to='/ChooseGod' />}
           </div>
         </div>
