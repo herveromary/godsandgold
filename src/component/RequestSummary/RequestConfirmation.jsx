@@ -3,7 +3,7 @@ import RecapCard from "../../Reusable/RecapCard";
 import "../../styles/css/RequestConfirmation.css";
 
 const RequestConfirmation = ({ state }) => {
-  let userName = localStorage.getItem("user").login;
+  let userName = JSON.parse(localStorage.getItem("user")).login;
 
   return (
     <div className="confirm">

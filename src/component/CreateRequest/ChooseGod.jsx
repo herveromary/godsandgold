@@ -5,20 +5,17 @@ import BottomNav from "../../Reusable/BottomNav";
 import "../../styles/css/ChooseGod.css";
 import gods from "./godsArray";
 import TextTransition, { presets } from "react-text-transition";
-import axios from "axios";
-
-const userName = localStorage.getItem("user");
-
-const TEXTS = [
-  `Hello ${userName}`,
-  "Choose Your God",
-  "Make your request",
-  "Make an offering",
-  "We may make your",
-  "wishes come true!",
-];
 
 const ChooseGod = () => {
+  const TEXTS = [
+    `Hello `,
+    "Choose Your God",
+    "Make your request",
+    "Make an offering",
+    "We may make your",
+    "wishes come true!",
+  ];
+
   const settings = {
     dots: false,
     infinite: true,

@@ -15,14 +15,10 @@ const TEXTS = [
 ];
 
 function Login() {
-  const [index, setIndex] = useState(0);
-
-  useEffect(() => {
-    const intervalId = setInterval(() => setIndex((index) => index + 1), 1500);
-  }, []);
-
   const [user, setUser] = useState("");
   const [redirect, setRedirect] = useState(false);
+
+  const [index, setIndex] = useState(0);
 
   //let history = useHistory();
   /*   const [input, setInput] = useState({

@@ -8,7 +8,6 @@ import Topbar from "../../Reusable/Topbar";
 import axios from "axios";
 import BottomNav from "../../Reusable/BottomNav";
 
-
 const PickUp = ({ location }) => {
   const { offering } = location.state;
 
@@ -36,7 +35,7 @@ const PickUp = ({ location }) => {
   };
 
   const sendRequest = () => {
-    const user = localStorage.getItem("user");
+    const user = JSON.parse(localStorage.getItem("user"));
     axios.post("http://localhost:3000/api/offerings", {
       user_id: user.id,
       god_id: godDetails.id,
