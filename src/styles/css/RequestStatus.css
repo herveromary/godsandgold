@@ -3,7 +3,6 @@
   flex-direction: column;
   align-items: center;
   position: relative;
-  min-height: 100vh;
   padding-bottom: 1rem;
 }
 
@@ -25,9 +24,14 @@
   border-top: 3px solid red;
   border-bottom: 3px solid red;
 }
+.formStatus {
+  display: flex;
+  flex-direction: column;
+}
 .buttonStatus {
   width: 200px;
   height: 46px;
+  margin: 8px;
   border-radius: 10px;
   border: 2px solid var(--lightblue);
   font-size: 16px;
