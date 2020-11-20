@@ -38,20 +38,24 @@ const ChooseRequest = () => {
       <div className="diagram-box">
         <div class="diagram-bar">
           <div class="diagram-1">
-            <span class="request"></span>
+            <span class="request">
+              <p>Je souhaite devenir très riche!</p>
+            </span>
             <span class="PercentText ">90%</span>
           </div>
         </div>
         <div class="diagram-bar">
           <div class="diagram-2">
-            <span class="request"></span>
+            <span class="request">
+              <p>Je veux que ma femme revienne!</p>
+            </span>
             <span class="PercentText ">69%</span>
           </div>
         </div>
         <div class="diagram-bar">
           <div class="diagram-3">
             <span class="request">
-              <em>'Find Stephan'</em>
+              <em>Je ne veux pas que ma femme revienne!</em>
             </span>
             <span class="PercentText ">62%</span>
           </div>
