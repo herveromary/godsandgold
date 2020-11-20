@@ -18,7 +18,7 @@ export default function GodDelivery() {
     setOfferings([
       {
         god: 'Zeus',
-        mortal: 'Gervais',
+        mortal: 'Fanny',
         request: 'une API qui fonctionne',
         offering: 'animal',
         date: '23 nikoçaliakas',
@@ -27,10 +27,10 @@ export default function GodDelivery() {
       {
         god: 'Zeus',
         mortal: 'Gervais',
-        request: 'une API qui fonctionne',
-        offering: 'animal',
-        date: '23 nikoçaliakas',
-        adress: 'allée de serr',
+        request: 'un logement à bordeaux',
+        offering: 'family member',
+        date: '12 nikoçaliakas',
+        adress: 'wherever',
       },
     ]);
   }, []);

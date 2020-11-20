@@ -1,14 +1,29 @@
-import React, { useState, useEffect } from 'react';
-
-import { Redirect, Link } from 'react-router-dom';
-
+import React, { useState, useContext, useEffect } from 'react';
+import axios from 'axios';
+import { GGContext } from '../Context';
+import Topbar from '../Reusable/Topbar';
 import '../styles/css/login.css';
-import logo from '../images/logo.webp';
+import logo from '../images/logo_GodsAndGold.png';
+import { Redirect, Link } from 'react-router-dom';
+import '../styles/css/login.css';
 import TextTransition, { presets } from 'react-text-transition';
 
+const TEXTS = [
+  'Choose Your God',
+  'Make your request',
+  'Make an offering',
+  'wishes come true!',
+];
+
 function Login() {
+  const [index, setIndex] = useState(0);
+
+  useEffect(() => {
+    const intervalId = setInterval(() => setIndex((index) => index + 1), 1500);
+  }, []);
+
+  const [user, setUser] = useState();
   const [redirect, setRedirect] = useState(false);
-  const [user, setUser] = useState('');
   //let history = useHistory();
   /*   const [input, setInput] = useState({
     login: '',
@@ -25,40 +40,17 @@ function Login() {
     setRedirect(true);
   };
 
-  const TEXTS = [
-    'Choose Your God',
-    'Make your request',
-    'Make an offering',
-    'wishes come true!',
-  ];
-
-  const [index, setIndex] = useState(0);
-
-  useEffect(() => {
-    const intervalId = setInterval(
-      () => setIndex((index) => index + 1),
-      4000 // every 3 seconds
-    );
-  }, []);
-
   return (
     <>
+      {/* <Topbar /> */}
       <div className='login_page'>
-        <img
-          className='login_logo'
-          src={logo}
-          alt='homme invoquant les dieux autour du feu'
-        />
-        <h2 className='login-slide-title'>
+        <img className='login_logo' src={logo} />
+        <h3 className='login_app_description'>
           <TextTransition
             text={TEXTS[index % TEXTS.length]}
             springConfig={presets.wobbly}
           />
-        </h2>
-        <p className='login_app_description'>
-          Can't make offerings because of lockdown amid Covid-546 B.C. ? We got
-          you covered ! LogIn, offer, relax... Dieu vous le rendra.
-        </p>
+        </h3>
         <div className='form'>
           <input
             placeholder='login'
@@ -77,6 +69,8 @@ function Login() {
             <Link to='LoginGod' className='are_you_a_god'>
               Are you a God ? Upgrade to Pro plan
             </Link>
+            {redirect && <Redirect to='/ChooseGod' />}
+            <p className='are_you_a_god'>Are you a God ? Upgrade to Pro plan</p>
             {redirect && <Redirect to='/ChooseGod' />}
           </div>
         </div>
