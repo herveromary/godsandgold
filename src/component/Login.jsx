@@ -60,7 +60,11 @@ function Login() {
               Make an offering !
             </button>
             <p className="are_you_a_god">Are you a God ? Upgrade to Pro plan</p>
+<<<<<<< HEAD
             <p>{user}</p>
+=======
+
+>>>>>>> dff279215e4f668c479b35ce6fee798795422247
             {redirect && <Redirect to="/ChooseGod" />}
           </div>
         </div>

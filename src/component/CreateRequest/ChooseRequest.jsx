@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useHistory } from "react-router-dom";
 import "../../styles/css/ChooseRequest.css";
-import BottomNav from "../../Reusable/BottomNav";
+import Topbar from "../../Reusable/Topbar";
 
 const ChooseRequest = () => {
   const [request, setrequest] = useState();
@@ -19,6 +19,7 @@ const ChooseRequest = () => {
 
   return (
     <div className="ChooseRequest">
+      <Topbar />
       <h2 className="chooseRequest-title">Create request</h2>
       <form className="chooseRequest-form" onSubmit={handleOnSubmit}>
         <h3 className="chooseRequest-subtitle">2 - Choose your request</h3>
@@ -46,16 +47,15 @@ const ChooseRequest = () => {
             <span class="PercentText ">69%</span>
           </div>
         </div>
-        <div class='diagram-bar'>
-          <div class='diagram-3'>
-            <span class='request'>
+        <div class="diagram-bar">
+          <div class="diagram-3">
+            <span class="request">
               <em>'Find Stephan'</em>
             </span>
-            <span class='PercentText '>62%</span>
+            <span class="PercentText ">62%</span>
           </div>
         </div>
       </div>
-      <BottomNav />
     </div>
   );
 };

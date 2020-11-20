@@ -1,7 +1,6 @@
 .topbar {
   width: 100%;
   top: 0;
-  height: 12vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -9,5 +8,20 @@
   background: #032b2f;
   transition: 0.2s;
   color: rgb(208, 211, 197);
-  font-family: 'Courier New', Courier, monospace;
+  font-family: "Courier New", Courier, monospace;
+}
+
+.topbar p {
+  margin-top: 0;
+  font-size: 0.8rem;
+  margin-bottom: 0.4rem;
+}
+
+.topbar h1 {
+  margin: 0.7rem 0.7rem 0.5rem 0.7rem;
+  font-family: "Gelios";
+  letter-spacing: 5px;
+  font-weight: lighter;
+  font-size: 2.2rem;
+  text-shadow: -1px -1px white, 2px 2px #333;
 }
