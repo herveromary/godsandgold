@@ -7,16 +7,15 @@ import logo from '../images/logo.webp';
 
 function Login() {
   const [redirect, setRedirect] = useState(false);
-  const [input, setInput] = useState({
+  let history = useHistory();
+  /*   const [input, setInput] = useState({
     login: '',
     password: '',
     email: '',
-  });
+  }); */
 
   const onChange = (e) => {
-    setInput({
-      [e.target.name]: e.target.value,
-    });
+    setUser(e.target.value);
   };
 
   const signIn = () => {
@@ -43,8 +42,8 @@ function Login() {
             type='text'
             id='login'
             name='login'
+            value={user}
             onChange={onChange}
-            value={input.login}
             className='input'
             required
           />
@@ -53,7 +52,6 @@ function Login() {
               Make an offering !
             </button>
             <p className='are_you_a_god'>Are you a God ? Upgrade to Pro plan</p>
-            <p>{input.userText}</p>
             {redirect && <Redirect to='/ChooseGod' />}
           </div>
         </div>

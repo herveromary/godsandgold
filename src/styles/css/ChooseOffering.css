@@ -13,7 +13,8 @@
   padding: 8px;
   background-image: linear-gradient(
     to bottom right,
-    var(--blue),
+    var(--other-red),
+    var(--red),
     var(--lightblue)
   );
   border-radius: 10px;

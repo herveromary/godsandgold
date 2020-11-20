@@ -1,18 +1,16 @@
 import React, { useState } from "react";
-import { Link, useLocation } from "react-router-dom";
+import { Link } from "react-router-dom";
 import "../../styles/css/ChooseOffering.css";
 
-import fruit from "../../styles/fruits.png";
-import animal from "../../styles/ewe.png";
-import family from "../../styles/family.png";
-import jewels from "../../styles/diamond.png";
-import wine from "../../styles/barrel.png";
-import coin from "../../styles/coins.png";
+import fruit from "../../styles/fruitss.png";
+import animal from "../../styles/sheep.png";
+import family from "../../styles/family2.png";
+import jewels from "../../styles/chest.png";
+import wine from "../../styles/grapes.png";
+import coin from "../../styles/money.png";
 
-const ChooseOffering = ({ page, setPage, location }) => {
+const ChooseOffering = () => {
   const [offering, setOffering] = useState("");
-  location = useLocation();
-  console.log(location.pathname);
 
   return (
     <div className="offeringpage">
@@ -57,7 +55,7 @@ const ChooseOffering = ({ page, setPage, location }) => {
         <Link
           to={{ pathname: `/choosepickup`, state: { offering: "money" } }}
           className="offerButton">
-          <p> Oboli</p>
+          <p> Oboli and drachma</p>
           <img src={coin} alt="coins"></img>
         </Link>
         <Link
@@ -66,7 +64,7 @@ const ChooseOffering = ({ page, setPage, location }) => {
             state: { offering: "precious and beautiful jewels" },
           }}
           className="offerButton">
-          <p> Jewelry</p>
+          <p> Precious jewelry</p>
           <img src={jewels} alt="diamonds"></img>
         </Link>
       </div>
