@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { useHistory } from "react-router-dom";
 import "../../styles/css/ChooseRequest.css";
 import Topbar from "../../Reusable/Topbar";
+import BottomNav from "../../Reusable/BottomNav";
 
 const ChooseRequest = () => {
   const [request, setrequest] = useState();
@@ -56,6 +57,7 @@ const ChooseRequest = () => {
           </div>
         </div>
       </div>
+      <BottomNav />
     </div>
   );
 };

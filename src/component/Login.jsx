@@ -1,15 +1,31 @@
-import React, { useState, useEffect } from "react";
 
-import { Redirect } from "react-router-dom";
-
-import "../styles/css/login.css";
-import logo from "../images/logo.webp";
-import TextTransition, { presets } from "react-text-transition";
+import React, { useState, useContext, useEffect } from "react";
 import axios from "axios";
+import { Redirect, useHistory } from "react-router-dom";
+import { GGContext } from "../Context";
+import Topbar from "../Reusable/Topbar";
+import "../styles/css/login.css";
+import logo from "../images/logo_GodsAndGold.png";
+import TextTransition, { presets } from "react-text-transition";
+
+const TEXTS = [
+  "Choose Your God",
+  "Make your request",
+  "Make an offering",
+  "wishes come true!",
+];
+
 
 function Login() {
-  const [redirect, setRedirect] = useState(false);
+  const [index, setIndex] = useState(0);
+
+  useEffect(() => {
+    const intervalId = setInterval(() => setIndex((index) => index + 1), 1500);
+  }, []);
+
   const [user, setUser] = useState("");
+  const [redirect, setRedirect] = useState(false);
+
   //let history = useHistory();
   /*   const [input, setInput] = useState({
     login: '',
@@ -22,6 +38,7 @@ function Login() {
   };
 
   const signIn = () => {
+
     const u = {
       login: user,
       password: "123456",
@@ -53,24 +70,21 @@ function Login() {
     );
   }, []);
 
+
   return (
     <>
+      {/* <Topbar /> */}
       <div className="login_page">
-        <img
-          className="login_logo"
-          src={logo}
-          alt="homme invoquant les dieux autour du feu"
-        />
-        <h2 className="login-slide-title">
+        <img className="login_logo" src={logo} />
+        <h3 className="login_app_description">
+
           <TextTransition
             text={TEXTS[index % TEXTS.length]}
             springConfig={presets.wobbly}
           />
-        </h2>
-        <p className="login_app_description">
-          Can't make offerings because of lockdown amid Covid-546 B.C. ? We got
-          you covered ! LogIn, offer, relax... Dieu vous le rendra.
-        </p>
+
+        </h3>
+
         <div className="form">
           <input
             placeholder="login"

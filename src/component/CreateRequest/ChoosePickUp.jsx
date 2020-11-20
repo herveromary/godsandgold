@@ -6,6 +6,8 @@ import "react-calendar/dist/Calendar.css";
 import RecapCard from "../../Reusable/RecapCard";
 import Topbar from "../../Reusable/Topbar";
 import axios from "axios";
+import BottomNav from "../../Reusable/BottomNav";
+
 
 const PickUp = ({ location }) => {
   const { offering } = location.state;
@@ -50,7 +52,7 @@ const PickUp = ({ location }) => {
     <div className="pickup">
       <Topbar />
       <div>
-        <h2>Prepare your offering</h2>
+        <h2 className="chooseRequest-title">Prepare your offering</h2>
         <RecapCard details={recap} />
         <h3 className="titleH3PickUp">Pick up time</h3>
         <form className="formPickUp" onSubmit={handleSubmit}>
@@ -78,6 +80,7 @@ const PickUp = ({ location }) => {
           </button>
         </form>
       </div>
+      <BottomNav />
     </div>
   );
 };

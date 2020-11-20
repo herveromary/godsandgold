@@ -1,29 +1,46 @@
 import React, { useState } from "react";
-import { useHistory } from "react-router-dom";
+import { useHistory, Redirect } from "react-router-dom";
 import "../../styles/css/RequestStatus.css";
 
 const RequestStatus = () => {
-  const [approved, setApproved] = useState(false);
+  const [approved, setApproved] = useState(true);
+  const [redirect, setRedirect] = useState(false);
+  const [redirectLogin, setRedirectLogin] = useState(false);
 
   const history = useHistory();
 
-  const handleOnSubmit = (event) => {
-    event.preventDefault();
-    history.push("/choosegod");
+  // const handleOnSubmitOn = (event) => {
+  //   event.preventDefault();
+  //   history.push("/choosegod");
+  // };
+  const chooseGod = () => {
+    setRedirect(true);
+  };
+  const logOut = () => {
+    setRedirectLogin(true);
   };
 
   return (
     <div className="globalStatus">
-      <h2>Status</h2>
+      <h2 className="chooseRequest-title">Status</h2>
       <div>
         <p className={approved ? "status-approved" : "status-declined"}>
           {approved ? "Approved" : "Declined"}
         </p>
       </div>
-      <form onSubmit={handleOnSubmit}>
-        <button className="buttonStatus" type="submit">
+      <form className="formStatus">
+        <button
+          type="button"
+          onClick={() => chooseGod()}
+          className="buttonStatus"
+        >
           New Request
         </button>
+        <button className="buttonStatus" type="button" onClick={() => logOut()}>
+          Log Out
+        </button>
+        {redirectLogin && <Redirect to="/" />}
+        {redirect && <Redirect to="/choosegod" />}
       </form>
     </div>
   );
