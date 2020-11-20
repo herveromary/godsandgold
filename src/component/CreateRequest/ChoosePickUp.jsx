@@ -5,6 +5,7 @@ import "../../styles/css/ChoosePickUp.css";
 import "react-calendar/dist/Calendar.css";
 import RecapCard from "../../Reusable/RecapCard";
 import Topbar from "../../Reusable/Topbar";
+import BottomNav from "../../Reusable/BottomNav";
 
 const PickUp = ({ location }) => {
   const { offering } = location.state;
@@ -63,6 +64,7 @@ const PickUp = ({ location }) => {
           </button>
         </form>
       </div>
+      <BottomNav />
     </div>
   );
 };

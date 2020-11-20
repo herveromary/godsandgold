@@ -6,7 +6,6 @@ import ChooseRequest from "./component/CreateRequest/ChooseRequest";
 import ChooseOffering from "./component/CreateRequest/ChooseOffering";
 import ChoosePickUp from "./component/CreateRequest/ChoosePickUp";
 import RequestSummary from "./component/RequestSummary/RequestSummary";
-import BottomNav from "./Reusable/BottomNav";
 import "./App.css";
 import "./styles/css/variables.css";
 
@@ -21,7 +20,6 @@ function App() {
         <Route path="/choosepickup" component={ChoosePickUp} />
         <Route path="/requestsummary" component={RequestSummary} />
       </Switch>
-      <BottomNav />
     </div>
   );
 }

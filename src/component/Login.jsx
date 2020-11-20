@@ -1,12 +1,28 @@
-import React, { useState, useContext } from "react";
+import React, { useState, useContext, useEffect } from "react";
 import axios from "axios";
 import { Redirect, useHistory } from "react-router-dom";
 import { GGContext } from "../Context";
 import Topbar from "../Reusable/Topbar";
 import "../styles/css/login.css";
-import logo from "../images/logo.webp";
+import logo from "../images/logo_GodsAndGold.png";
+import TextTransition, { presets } from "react-text-transition";
+
+const TEXTS = [
+  `Can't make offerings`,
+  "because of lockdown",
+  "amid Covid-546 B.C.?",
+  "We got you covered!",
+  "LogIn, offer, relax...",
+  "Dieu vous le rendra.",
+];
 
 function Login() {
+  const [index, setIndex] = useState(0);
+
+  useEffect(() => {
+    const intervalId = setInterval(() => setIndex((index) => index + 1), 1500);
+  }, []);
+
   const [user, setUser] = useState();
   const [redirect, setRedirect] = useState(false);
   let history = useHistory();
@@ -39,10 +55,11 @@ function Login() {
       {/* <Topbar /> */}
       <div className="login_page">
         <img className="login_logo" src={logo} />
-        <h2 className="login_title">GodsandGold</h2>
         <p className="login_app_description">
-          Can't make offerings because of lockdown amid Covid-546 B.C. ? We got
-          you covered ! LogIn, offer, relax... Dieu vous le rendra.
+          <TextTransition
+            text={TEXTS[index % TEXTS.length]}
+            springConfig={presets.wobbly}
+          />
         </p>
         <div className="form">
           <input
@@ -60,11 +77,6 @@ function Login() {
               Make an offering !
             </button>
             <p className="are_you_a_god">Are you a God ? Upgrade to Pro plan</p>
-<<<<<<< HEAD
-            <p>{user}</p>
-=======
-
->>>>>>> dff279215e4f668c479b35ce6fee798795422247
             {redirect && <Redirect to="/ChooseGod" />}
           </div>
         </div>
