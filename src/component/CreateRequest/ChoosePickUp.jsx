@@ -37,7 +37,7 @@ const PickUp = ({ location }) => {
     <div className="pickup">
       <Topbar />
       <div>
-        <h2>Prepare your offering</h2>
+        <h2 className="chooseRequest-title">Prepare your offering</h2>
         <RecapCard details={recap} />
         <h3 className="titleH3PickUp">Pick up time</h3>
         <form className="formPickUp" onSubmit={handleSubmit}>
