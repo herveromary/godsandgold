@@ -2,9 +2,11 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  position: relative;
+  min-height: 100vh;
+  padding-bottom: 1rem;
 }
-.statusTitle {
-}
+
 .status-approved {
   padding: 2px 0 6px 0;
   margin: 25px;

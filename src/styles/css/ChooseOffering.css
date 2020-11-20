@@ -1,5 +1,7 @@
 .offeringpage {
-  min-height: 90vh;
+  min-height: 100vh;
+  position: relative;
+  padding-bottom: 2rem;
 }
 
 .selectGift {
@@ -11,20 +13,27 @@
 
 .offerButton {
   padding: 8px;
-  background-image: linear-gradient(
-    to bottom right,
-    var(--other-red),
-    var(--red),
-    var(--lightblue)
-  );
+  background-image: linear-gradient(to bottom right, var(--dark), var(--blue));
   border-radius: 10px;
   margin: 16px 8px;
   width: 6rem;
-  box-shadow: 4px 2px 2px var(--dark);
+  box-shadow: 8px 8px 10px var(--dark);
 }
 
 .offerButton:hover {
-  filter: brightness(80%);
+  box-shadow: none;
+}
+
+.offerButton:active {
+  box-shadow: none;
+}
+
+.offerButtonused {
+  padding: 8px;
+  background-image: linear-gradient(to bottom right, var(--dark), var(--blue));
+  border-radius: 10px;
+  margin: 16px 8px;
+  width: 6rem;
 }
 
 .offerButton p {
@@ -34,6 +43,18 @@
 }
 
 .offerButton img {
+  width: 50px;
+  height: 50px;
+  text-align: right;
+}
+
+.offerButtonused p {
+  color: white;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.offerButtonused img {
   width: 50px;
   height: 50px;
   text-align: right;

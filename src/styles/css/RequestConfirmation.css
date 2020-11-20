@@ -6,3 +6,8 @@
   font-weight: bold;
   font-size: 18px;
 }
+
+.confirm {
+  position: relative;
+  padding-bottom: 2rem;
+}
