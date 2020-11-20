@@ -60,12 +60,16 @@
   text-align: right;
 }
 
-h2 {
+.offering-title {
   text-align: center;
   color: var(--dark);
+  background-color: var(--lightblue);
   font-size: 20px;
   font-weight: 500;
   text-transform: uppercase;
+  width: 100%;
+  padding: 16px 0;
+  margin: 0;
 }
 
 a.offerButton {

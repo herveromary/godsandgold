@@ -12,6 +12,7 @@ const PickUp = ({ location }) => {
 
   const [date, setDate] = useState(new Date());
   const [address, setAddress] = useState("");
+
   let godDetails = localStorage.getItem("choosenGod");
   godDetails = JSON.parse(godDetails);
   let godName = godDetails.name;

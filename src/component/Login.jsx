@@ -8,12 +8,10 @@ import logo from "../images/logo_GodsAndGold.png";
 import TextTransition, { presets } from "react-text-transition";
 
 const TEXTS = [
-  `Can't make offerings`,
-  "because of lockdown",
-  "amid Covid-546 B.C.?",
-  "We got you covered!",
-  "LogIn, offer, relax...",
-  "Dieu vous le rendra.",
+  "Choose Your God",
+  "Make your request",
+  "Make an offering",
+  "wishes come true!",
 ];
 
 function Login() {
@@ -25,7 +23,7 @@ function Login() {
 
   const [user, setUser] = useState();
   const [redirect, setRedirect] = useState(false);
-  let history = useHistory();
+  //let history = useHistory();
   /*   const [input, setInput] = useState({
     login: '',
     password: '',
@@ -36,18 +34,9 @@ function Login() {
     setUser(e.target.value);
   };
 
-  //console.log(input);
-
   const signIn = () => {
-    localStorage.setItem("user", user);
-    history.push("/choosegod");
-    //     axios
-    //       .get(`https://hookspendables.herokuapp.com/api/users/`, {user.login})
-    //       .then((response) => response.data)
-    //       .then((data) => data.filter((user) => user.login) === input.login)
-    //       //   .then((data) => data.filter((user) => console.log(user.login)))
-    //       .then((data) => setUser(data[0]));
-    //     //   .then(() => setRedirect(false));
+    localStorage.setItem("user", JSON.stringify(user));
+    setRedirect(true);
   };
 
   return (
@@ -55,12 +44,12 @@ function Login() {
       {/* <Topbar /> */}
       <div className="login_page">
         <img className="login_logo" src={logo} />
-        <p className="login_app_description">
+        <h3 className="login_app_description">
           <TextTransition
             text={TEXTS[index % TEXTS.length]}
             springConfig={presets.wobbly}
           />
-        </p>
+        </h3>
         <div className="form">
           <input
             placeholder="login"

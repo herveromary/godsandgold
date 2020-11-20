@@ -22,7 +22,7 @@ const ChooseOffering = () => {
   return (
     <div className="offeringpage">
       <Topbar />
-      <h2> What do you want to offer ? </h2>
+      <h2 className="offering-title"> What do you want to offer ? </h2>
       <div className="selectGift">
         <div
           onClick={() => setSelectWine(true)}

@@ -57,12 +57,12 @@ const ChooseGod = () => {
 
   return (
     <div className="container-god-slide">
-      <h2 className="gods-slide-title">
+      <h3 className="gods-slide-title">
         <TextTransition
           text={TEXTS[index % TEXTS.length]}
           springConfig={presets.wobbly}
         />
-      </h2>
+      </h3>
       <Slider {...settings}>
         {gods.map((god) => (
           <div key={god.id} className="god-slide">
