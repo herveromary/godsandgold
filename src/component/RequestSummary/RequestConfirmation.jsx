@@ -7,7 +7,7 @@ const RequestConfirmation = ({ state }) => {
 
   return (
     <div className="confirm">
-      <h2>Confirmation</h2>
+      <h2 className="chooseRequest-title">Confirmation</h2>
       <p className="textConfirmation">{`Hi ${userName}, your request was submitted ✅`}</p>
       <RecapCard details={state} />
     </div>
