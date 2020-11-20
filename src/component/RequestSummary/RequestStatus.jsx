@@ -9,7 +9,7 @@ const RequestStatus = () => {
 
   const handleOnSubmit = (event) => {
     event.preventDefault();
-    history.push("/requestgod");
+    history.push("/choosegod");
   };
 
   return (
