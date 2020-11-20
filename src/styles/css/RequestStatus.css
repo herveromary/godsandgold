@@ -7,16 +7,18 @@
 }
 .status-approved {
   padding: 2px 0 6px 0;
+  margin: 25px;
   color: green;
-  font-size: 60px;
+  font-size: 50px;
   font-family: "Fredericka the Great", cursive;
   border-top: 3px solid green;
   border-bottom: 3px solid green;
 }
 .status-declined {
   padding: 4px 0 4px 0;
+  margin: 25px;
   color: red;
-  font-size: 60px;
+  font-size: 50px;
   font-family: "Fredericka the Great", cursive;
   border-top: 3px solid red;
   border-bottom: 3px solid red;

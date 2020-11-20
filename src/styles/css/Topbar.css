@@ -9,5 +9,13 @@
   background: #032b2f;
   transition: 0.2s;
   color: rgb(208, 211, 197);
-  font-family: 'Courier New', Courier, monospace;
+  font-family: "Courier New", Courier, monospace;
+}
+.topbar_title {
+  margin-block-end: 0;
+  margin-block-start: 2px;
+}
+.topbar p {
+  margin-block-start: 2px;
+  margin-block-end: 2px;
 }
