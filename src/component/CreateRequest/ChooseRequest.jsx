@@ -46,16 +46,15 @@ const ChooseRequest = () => {
             <span class="PercentText ">69%</span>
           </div>
         </div>
-        <div class='diagram-bar'>
-          <div class='diagram-3'>
-            <span class='request'>
+        <div class="diagram-bar">
+          <div class="diagram-3">
+            <span class="request">
               <em>'Find Stephan'</em>
             </span>
-            <span class='PercentText '>62%</span>
+            <span class="PercentText ">62%</span>
           </div>
         </div>
       </div>
-      <BottomNav />
     </div>
   );
 };
