@@ -68,7 +68,7 @@
 }
 
 .diagram-bar {
-  width: 90%;
+  width: 95%;
   height: 50px;
   position: relative;
   background: rgba(17, 17, 17, 0.3);
@@ -88,7 +88,7 @@
   -o-animation: Animate-1 4s;
   height: 50px;
   position: absolute;
-  background-color: #ea8564;
+  background-color: rgb(234, 133, 100);
   border-radius: 4px;
   -o-border-radius: 4px;
   -webkit-border-radius: 4px;
@@ -97,7 +97,7 @@
 }
 @keyframes Animate-1 {
   from {
-    width: 10px;
+    width: 10%;
   }
   to {
     width: 90%;
@@ -105,7 +105,7 @@
 }
 @-webkit-keyframes Animate-1 {
   from {
-    width: 10px;
+    width: 10%;
   }
   to {
     width: 90%;
@@ -113,7 +113,7 @@
 }
 @-moz-keyframes Animate-1 {
   from {
-    width: 10px;
+    width: 10%;
   }
   to {
     width: 90%;
@@ -121,7 +121,7 @@
 }
 @-o-keyframes Animate-1 {
   from {
-    width: 10px;
+    width: 10%;
   }
   to {
     width: 90%;
@@ -145,7 +145,7 @@
 }
 @keyframes Animate-2 {
   from {
-    width: 10px;
+    width: 10%;
   }
   to {
     width: 69%;
@@ -153,7 +153,7 @@
 }
 @-webkit-keyframes Animate-2 {
   from {
-    width: 10px;
+    width: 10%;
   }
   to {
     width: 69%;
@@ -161,7 +161,7 @@
 }
 @-moz-keyframes Animate-2 {
   from {
-    width: 10px;
+    width: 10%;
   }
   to {
     width: 69%;
@@ -169,7 +169,7 @@
 }
 @-o-keyframes Animate-2 {
   from {
-    width: 10px;
+    width: 10%;
   }
   to {
     width: 69%;
@@ -181,10 +181,10 @@
   -webkit-animation: Animate-3 5s;
   -moz-animation: Animate-3 5s;
   -o-animation: Animate-3 5s;
-  width: 52%;
+  width: 62%;
   height: 50px;
   position: absolute;
-  background-color: #99856d;
+  background-color: rgb(153, 133, 109);
   border-radius: 4px;
   -o-border-radius: 4px;
   -webkit-border-radius: 4px;
@@ -193,34 +193,34 @@
 }
 @keyframes Animate-3 {
   from {
-    width: 10px;
+    width: 10%;
   }
   to {
-    width: 52%;
+    width: 62%;
   }
 }
 @-webkit-keyframes Animate-3 {
   from {
-    width: 10px;
+    width: 10%;
   }
   to {
-    width: 52%;
+    width: 62%;
   }
 }
 @-moz-keyframes Animate-3 {
   from {
-    width: 10px;
+    width: 10%;
   }
   to {
-    width: 52%;
+    width: 62%;
   }
 }
 @-o-keyframes Animate-3 {
   from {
-    width: 10px;
+    width: 10%;
   }
   to {
-    width: 52%;
+    width: 62%;
   }
 }
 
@@ -233,4 +233,14 @@
   text-shadow: none;
   color: #fff;
   font-size: 18px;
+}
+
+.request {
+  font-size: 0.8em;
+  z-index: 1;
+  float: left;
+  position: absolute;
+  margin-top: 16px;
+  padding-left: 4px;
+  text-shadow: none;
 }
