@@ -1,9 +1,11 @@
 import React, { useState } from "react";
+import { useHistory } from "react-router-dom";
 import "../../styles/css/ChooseRequest.css";
 import BottomNav from "../../Reusable/BottomNav";
 
 const ChooseRequest = () => {
   const [request, setrequest] = useState();
+  let history = useHistory();
 
   const handleOnChange = (e) => {
     setrequest(e.target.value);
@@ -12,6 +14,7 @@ const ChooseRequest = () => {
   const handleOnSubmit = (e) => {
     e.preventDefault();
     localStorage.setItem("request", request);
+    history.push("/chooseoffering");
   };
 
   return (
@@ -25,6 +28,7 @@ const ChooseRequest = () => {
           id="requestChoice"
           value={request}
           onChange={handleOnChange}
+          required
         />
         <button type="submit">Confirm</button>
       </form>
@@ -42,10 +46,12 @@ const ChooseRequest = () => {
             <span class="PercentText ">69%</span>
           </div>
         </div>
-        <div class="diagram-bar">
-          <div class="diagram-3">
-            <span class="request"></span>
-            <span class="PercentText ">52%</span>
+        <div class='diagram-bar'>
+          <div class='diagram-3'>
+            <span class='request'>
+              <em>'Find Stephan'</em>
+            </span>
+            <span class='PercentText '>62%</span>
           </div>
         </div>
       </div>
