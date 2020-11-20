@@ -4,14 +4,16 @@ import Calendar from "react-calendar";
 import "../../styles/css/ChoosePickUp.css";
 import "react-calendar/dist/Calendar.css";
 import RecapCard from "../../Reusable/RecapCard";
+import Topbar from "../../Reusable/Topbar";
+
 
 const PickUp = ({ location }) => {
   const { offering } = location.state;
 
   const [date, setDate] = useState(new Date());
   const [address, setAddress] = useState("");
-
-  const recap = { god: "id", request: "domus", offering };
+  const request = localStorage.getItem("request");
+  const recap = { god: "id", request, offering };
 
   const history = useHistory();
 
@@ -27,7 +29,8 @@ const PickUp = ({ location }) => {
     setAddress(event.target.value);
   };
 
-  return (
+  return (<>
+      <Topbar />
     <div>
       <h2>Prepare your offering</h2>
       <RecapCard details={recap} />
@@ -57,6 +60,7 @@ const PickUp = ({ location }) => {
         </button>
       </form>
     </div>
+    </>
   );
 };
 
