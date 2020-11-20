@@ -4,7 +4,16 @@ import Slider from "react-slick";
 import BottomNav from "../../Reusable/BottomNav";
 import "../../styles/css/ChooseGod.css";
 import gods from "./godsArray";
+import TextTransition, { presets } from "react-text-transition";
 import axios from "axios";
+
+const TEXTS = [
+  "Choose Your God",
+  "Make your request",
+  "Make an offering",
+  "We may make your",
+  "wishes come true!",
+];
 
 const ChooseGod = () => {
   const settings = {
@@ -15,6 +24,8 @@ const ChooseGod = () => {
     slidesToScroll: 1,
   };
 
+  const [index, setIndex] = useState(0);
+
   let history = useHistory();
 
   /* const [god, setGod] = useState(); */
@@ -24,6 +35,14 @@ const ChooseGod = () => {
     localStorage.setItem("choosenGod", JSON.stringify(choosenGod[0]));
     history.push("/chooserequest");
   };
+
+  useEffect(() => {
+    const intervalId = setInterval(
+      () => setIndex((index) => index + 1),
+      3000 // every 3 seconds
+    );
+  }, []);
+
   /* const [gods, setGods] = useState([]);
 
   useEffect(() => {
@@ -35,7 +54,12 @@ const ChooseGod = () => {
 
   return (
     <div className="container-god-slide">
-      <h2 className="gods-slide-title">Choose Your God</h2>
+      <h2 className="gods-slide-title">
+        <TextTransition
+          text={TEXTS[index % TEXTS.length]}
+          springConfig={presets.wobbly}
+        />
+      </h2>
       <Slider {...settings}>
         {gods.map((god) => (
           <div key={god.id} className="god-slide">
