@@ -5,7 +5,7 @@ import "../../styles/css/ChoosePickUp.css";
 import "react-calendar/dist/Calendar.css";
 import RecapCard from "../../Reusable/RecapCard";
 import Topbar from "../../Reusable/Topbar";
-
+import BottomNav from "../../Reusable/BottomNav";
 
 const PickUp = ({ location }) => {
   const { offering } = location.state;
@@ -29,37 +29,39 @@ const PickUp = ({ location }) => {
     setAddress(event.target.value);
   };
 
-  return (<>
+  return (
+    <>
       <Topbar />
-    <div>
-      <h2>Prepare your offering</h2>
-      <RecapCard details={recap} />
-      <h3 className="titleH3PickUp">Pick up time</h3>
-      <form className="formPickUp" onSubmit={handleSubmit}>
-        <div className="calendar">
-          <Calendar
-            className="customCalendar"
-            onChange={setDate}
-            value={date}
-          />
-        </div>
-        <div className="formInput">
-          <label htmlFor="address">Address</label>
-          <input
-            name="address"
-            id="address"
-            className="inputPickUp"
-            type="text"
-            placeholder="Efpolidos Street, Athens"
-            value={address}
-            onChange={handleChange}
-          />
-        </div>
-        <button className="buttonPickUp" type="submit">
-          Send
-        </button>
-      </form>
-    </div>
+      <div>
+        <h2>Prepare your offering</h2>
+        <RecapCard details={recap} />
+        <h3 className="titleH3PickUp">Pick up time</h3>
+        <form className="formPickUp" onSubmit={handleSubmit}>
+          <div className="calendar">
+            <Calendar
+              className="customCalendar"
+              onChange={setDate}
+              value={date}
+            />
+          </div>
+          <div className="formInput">
+            <label htmlFor="address">Address</label>
+            <input
+              name="address"
+              id="address"
+              className="inputPickUp"
+              type="text"
+              placeholder="Efpolidos Street, Athens"
+              value={address}
+              onChange={handleChange}
+            />
+          </div>
+          <button className="buttonPickUp" type="submit">
+            Send
+          </button>
+        </form>
+      </div>
+      <BottomNav />
     </>
   );
 };
