@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import Topbar from "../../Reusable/Topbar";
 import "../../styles/css/ChooseOffering.css";
 
 import fruit from "../../styles/fruitss.png";
@@ -14,6 +15,7 @@ const ChooseOffering = () => {
 
   return (
     <div className="offeringpage">
+      <Topbar />
       <h2> What do you want to offer ? </h2>
       <div className="selectGift">
         <Link

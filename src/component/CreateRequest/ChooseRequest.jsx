@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useHistory } from "react-router-dom";
 import "../../styles/css/ChooseRequest.css";
-import BottomNav from "../../Reusable/BottomNav";
+import Topbar from "../../Reusable/Topbar";
 
 const ChooseRequest = () => {
   const [request, setrequest] = useState();
@@ -19,6 +19,7 @@ const ChooseRequest = () => {
 
   return (
     <div className="ChooseRequest">
+      <Topbar />
       <h2 className="chooseRequest-title">Create request</h2>
       <form className="chooseRequest-form" onSubmit={handleOnSubmit}>
         <h3 className="chooseRequest-subtitle">2 - Choose your request</h3>

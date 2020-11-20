@@ -14,8 +14,7 @@
   background-image: linear-gradient(
     to bottom right,
     var(--other-red),
-    var(--red),
-    var(--lightblue)
+    var(--red)
   );
   border-radius: 10px;
   margin: 16px 8px;
