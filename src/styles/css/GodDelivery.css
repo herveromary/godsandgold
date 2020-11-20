@@ -1,0 +1,18 @@
+.deliveryGod_page {
+  min-height: 100vh;
+  position: relative;
+  padding-bottom: 5rem;
+  top: 0;
+
+  color: --darkblue;
+  display: flex;
+  flex-direction: column;
+  /* align-items: center; */
+  background: rgb(138, 119, 26);
+  background: linear-gradient(
+    187deg,
+    rgba(138, 119, 26, 1) 0%,
+    rgba(121, 99, 9, 1) 44%,
+    rgba(255, 192, 0, 1) 100%
+  );
+}

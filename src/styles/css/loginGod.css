@@ -1,0 +1,102 @@
+.loginGod_page {
+  min-height: 100vh;
+  position: relative;
+  padding-bottom: 5rem;
+  top: 0;
+
+  color: --darkblue;
+  display: flex;
+  flex-direction: column;
+  /* align-items: center; */
+  background: rgb(138, 119, 26);
+  background: linear-gradient(
+    187deg,
+    rgba(138, 119, 26, 1) 0%,
+    rgba(121, 99, 9, 1) 44%,
+    rgba(255, 192, 0, 1) 100%
+  );
+}
+
+.loginGod_logo {
+  margin-top: 50px;
+  height: 200px;
+}
+/* background-image: url('/src/images/image-offrande.webp');
+    animation: clouds_animation 4s ease-in linear;
+    background-repeat: no-repeat;
+    background-position: bottom;
+  }
+  
+  @keyframes clouds_animation {
+    0% {
+      background-position: -80px 500px;
+    }
+    100% {
+      background-position: -80px 200px;
+    }
+  } */
+
+.loginGod_title {
+  color: rgb(215, 58, 49);
+}
+.loginGod_app_description {
+  margin-top: -30px;
+  padding: 10%;
+  font-size: 1.5rem;
+  font-style: italic;
+  margin-bottom: 50px;
+  color: var(--lightblue);
+}
+
+.formGod {
+  text-align: center;
+}
+
+.form input {
+  padding: 20px;
+  border: none;
+  border-radius: 10%;
+  border-spacing: 10px;
+  margin: 10px;
+  width: 70%;
+  margin: 10px 20px 0px 20px;
+}
+
+/* .h2 {
+    margin: 0;
+    padding: 0px;
+  } */
+
+.loginGod-slide-title {
+  color: var(--dark);
+  filter: drop-shadow(0px 0px 15px white);
+  letter-spacing: 0.4em;
+}
+
+.formGod button {
+  display: inline-block;
+  min-width: 6.25rem;
+  max-width: 18.75rem;
+  width: 90%;
+  height: 3.125rem;
+  margin: 10px 20px 20px 20px;
+  padding: 0.25rem 0.875rem;
+  background-color: rgb(215, 58, 49);
+  border-width: 0.0625rem;
+  border-style: solid;
+  border-image: initial;
+  border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+  border-radius: 0.125rem;
+  text-shadow: rgba(0, 0, 0, 0.25) 0px -1px 0px;
+  color: white;
+  font-weight: 700;
+  font-size: 20px;
+  text-decoration: none;
+  outline: 0px;
+  font-family: Montserrat, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+.are_you_a_god {
+  margin-top: 50px;
+  color: cornsilk;
+}

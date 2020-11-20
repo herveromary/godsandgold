@@ -7,6 +7,7 @@ import ChooseOffering from './component/CreateRequest/ChooseOffering';
 import ChoosePickUp from './component/CreateRequest/ChoosePickUp';
 import RequestSummary from './component/RequestSummary/RequestSummary';
 import GodDelivery from './component/Gods/GodDelivery';
+import LoginGod from './component/LoginGod';
 import BottomNav from './Reusable/BottomNav';
 import './App.css';
 import './styles/css/variables.css';
@@ -22,6 +23,7 @@ function App() {
         <Route path='/choosepickup' component={ChoosePickUp} />
         <Route path='/requestsummary' component={RequestSummary} />
         <Route path='/goddelivery' component={GodDelivery} />
+        <Route path='/LoginGod' component={LoginGod} />
       </Switch>
     </div>
   );
