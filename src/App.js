@@ -21,6 +21,7 @@ function App() {
         <Route path="/choosepickup" component={ChoosePickUp} />
         <Route path="/requestsummary" component={RequestSummary} />
       </Switch>
+      <BottomNav />
     </div>
   );
 }

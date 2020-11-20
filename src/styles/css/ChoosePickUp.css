@@ -1,4 +1,8 @@
-
+.pickup {
+  position: relative;
+  min-height: 100vh;
+  padding-bottom: 2rem;
+}
 .textsChoosePickUp {
   margin: 0 auto 30px;
   padding: 15px 25px;
