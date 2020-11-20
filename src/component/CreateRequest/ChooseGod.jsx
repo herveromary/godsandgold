@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import Slider from "react-slick";
+import BottomNav from "../../Reusable/BottomNav";
 import "../../styles/css/ChooseGod.css";
 import axios from "axios";
 
@@ -15,61 +16,61 @@ const ChooseGod = () => {
   const gods = [
     {
       id: 1,
-      name: "Zeus",
+      name: "ZEUS",
       description: null,
       picture: "https://i.ibb.co/vmX44ks/Zeus.png",
     },
     {
       id: 11,
-      name: "Aphrodite",
+      name: "APHRODITE",
       description: null,
       picture: "https://i.ibb.co/Rppxv4v/Aphrodite.png",
     },
     {
       id: 21,
-      name: "Ares",
+      name: "ARES",
       description: null,
       picture: "https://i.ibb.co/GHHcpQd/Ares.png",
     },
     {
       id: 31,
-      name: "Dionysos",
+      name: "DIONYSOS",
       description: null,
       picture: "https://i.ibb.co/Qfk49rq/Dionysos.png",
     },
     {
       id: 41,
-      name: "Hades",
+      name: "HADES",
       description: null,
       picture: "https://i.ibb.co/qdbpTXy/Had-s.png",
     },
     {
       id: 51,
-      name: "Hephaistos",
+      name: "HEPHAISTOS",
       description: null,
       picture: "https://i.ibb.co/XjgXd9T/Hepha-stos.png",
     },
     {
       id: 61,
-      name: "Hermes",
+      name: "HERMES",
       description: null,
       picture: "https://i.ibb.co/QFnzXYQ/Herm-s.png",
     },
     {
       id: 71,
-      name: "Demeter",
+      name: "DEMETER",
       description: null,
       picture: "https://i.ibb.co/M8WD8f5/inconnu.png",
     },
     {
       id: 81,
-      name: "Athenas",
+      name: "ATHENA",
       description: null,
       picture: "https://i.ibb.co/1zrpWxD/inconnu02.png",
     },
     {
       id: 91,
-      name: "Poseidon",
+      name: "POSEIDON",
       description: null,
       picture: "https://i.ibb.co/zVxtxKk/Pose-don.png",
     },
@@ -96,6 +97,7 @@ const ChooseGod = () => {
           </div>
         ))}
       </Slider>
+      <BottomNav />
     </div>
   );
 };
