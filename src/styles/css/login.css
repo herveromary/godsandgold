@@ -1,6 +1,7 @@
 .login_page {
-  height: 100vh;
-
+  min-height: 100vh;
+  position: relative;
+  padding-bottom: 5rem;
   top: 0;
   background-color: --lightblue;
   color: --darkblue;
@@ -100,7 +101,7 @@
   font-size: 20px;
   text-decoration: none;
   outline: 0px;
-  font-family: Montserrat, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-family: Montserrat, "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
 .are_you_a_god {
