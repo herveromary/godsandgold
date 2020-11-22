@@ -22,7 +22,7 @@ const RequestStatus = () => {
 
   return (
     <div className="globalStatus">
-      <h2 className="chooseRequest-title">Status</h2>
+      <h2 className="request-status-title">Status</h2>
       <div>
         <p className={approved ? "status-approved" : "status-declined"}>
           {approved ? "Approved" : "Declined"}

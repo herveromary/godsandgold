@@ -1,27 +1,42 @@
-.offeringpage {
+.offeringpage-global {
   min-height: 100vh;
   position: relative;
-  padding-bottom: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+
+}
+
+.offeringpage {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex: 1;
+
 }
 
 .selectGift {
   display: flex;
   flex-wrap: wrap;
   text-align: center;
-  justify-content: center;
+  justify-content: space-around;
+  align-content: space-around;
+  flex: 1;
 }
 
 .offerButton {
   padding: 8px;
   background-image: linear-gradient(to bottom right, var(--dark), var(--blue));
   border-radius: 10px;
-  margin: 16px 8px;
-  width: 6rem;
+  width: 40%;
+  height: 17vh;
   box-shadow: 8px 8px 10px var(--dark);
 }
 
 .offerButton:hover {
-  box-shadow: none;
+  box-shadow: 10px 10px 10px var(--dark);
+  transition: 0.3s;
 }
 
 .offerButton:active {
@@ -32,8 +47,8 @@
   padding: 8px;
   background-image: linear-gradient(to bottom right, var(--dark), var(--blue));
   border-radius: 10px;
-  margin: 16px 8px;
-  width: 6rem;
+  width: 40%;
+  height: 17vh;
 }
 
 .offerButton p {
@@ -43,9 +58,7 @@
 }
 
 .offerButton img {
-  width: 50px;
-  height: 50px;
-  text-align: right;
+    margin: 3vh;
 }
 
 .offerButtonused p {
@@ -55,24 +68,75 @@
 }
 
 .offerButtonused img {
-  width: 50px;
-  height: 50px;
-  text-align: right;
+  margin: 3vh;
 }
 
 .offering-title {
-  text-align: center;
-  color: var(--dark);
-  background-color: var(--lightblue);
-  font-size: 20px;
-  font-weight: 500;
-  text-transform: uppercase;
-  width: 100%;
-  padding: 16px 0;
-  margin: 0;
+    background-color: var(--light);
+    color: var(--blue);
+    justify-self: start;
+    text-align: center;
+    padding: 16px;
+    margin: 0;
 }
 
 a.offerButton {
   text-decoration: none;
   color: white;
+}
+
+.card-title {
+  margin: 0;
+}
+
+@media screen and (max-width: 640px) {
+  .offerButton img {
+    transform: translateX(-7vh);
+      position: absolute;
+      margin-bottom: 3vh;
+      margin-top: 1vh;
+      height: 8vh;
+  }
+
+  .offerButtonused img {
+    transform: translateX(-7vh);
+      position: absolute;
+      margin-bottom: 3vh;
+      margin-top: 1vh;
+      height: 8vh;
+  }
+
+  .offerButton {
+    height: 15vh;
+  }
+
+  .offerButtonused {
+    height: 15vh;
+  }
+
+  .offerButton:active {
+    box-shadow: none;
+    transition: 1s;
+  }
+
+}
+
+@media screen and (min-height: 900px) {
+  .offerButton img {
+      height: 10vh;
+      margin-bottom: 3vh;
+      margin-top: 1.5vh;
+  }
+
+  .offerButtonused img {
+    height: 10vh;
+    margin-bottom: 3vh;
+    margin-top: 1.5vh;
+}
+
+.offerButton:active {
+  box-shadow: none;
+  transition: 0.3s;
+}
+
 }

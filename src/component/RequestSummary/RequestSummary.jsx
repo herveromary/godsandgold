@@ -11,6 +11,7 @@ const RequestSummary = ({ location }) => {
       <Topbar />
       <RequestConfirmation state={state} />
       <RequestStatus />
+      <p className="thanks-text">Merci de votre visite!</p>
     </div>
   );
 };

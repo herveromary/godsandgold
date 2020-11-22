@@ -9,7 +9,9 @@ const RequestConfirmation = ({ state }) => {
     <div className="confirm">
       <h2 className="chooseRequest-title">Confirmation</h2>
       <p className="textConfirmation">{`Hi ${userName}, your request was submitted ✅`}</p>
-      <RecapCard details={state} />
+      <div className="card-confirm">
+        <RecapCard details={state} />
+      </div>
     </div>
   );
 };

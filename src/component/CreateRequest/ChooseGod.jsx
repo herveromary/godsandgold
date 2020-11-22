@@ -6,14 +6,16 @@ import "../../styles/css/ChooseGod.css";
 import gods from "./godsArray";
 import TextTransition, { presets } from "react-text-transition";
 
+let userName = JSON.parse(localStorage.getItem("user")).login;
+
 const ChooseGod = () => {
   const TEXTS = [
-    `Hello `,
+    `Hello ${userName}`,
     "Choose Your God",
     "Make your request",
     "Make an offering",
-    "We may make your",
-    "wishes come true!",
+    "We may make your...",
+    "...wishes come true!",
   ];
 
   const settings = {
@@ -58,6 +60,7 @@ const ChooseGod = () => {
         <TextTransition
           text={TEXTS[index % TEXTS.length]}
           springConfig={presets.wobbly}
+          noOverflow={true}
         />
       </h3>
       <Slider {...settings}>

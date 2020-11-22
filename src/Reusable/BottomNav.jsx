@@ -9,30 +9,34 @@ const BottomNav = ({ path }) => {
       <NavLink
         to={(path = "/choosegod")}
         className="tab"
-        activeClassName="validTab">
+        activeClassName="validTab"
+      >
         {" "}
-        God{" "}
+        <p className="tab-text">God</p>{" "}
       </NavLink>
       <NavLink
         to={(path = "/chooserequest")}
         className="tab"
-        activeClassName="validTab">
+        activeClassName="validTab"
+      >
         {" "}
-        Request{" "}
+        <p className="tab-text">Request</p>{" "}
       </NavLink>
       <NavLink
         to={(path = "/chooseoffering")}
         className="tab"
-        activeClassName="validTab">
+        activeClassName="validTab"
+      >
         {" "}
-        Offering{" "}
+        <p className="tab-text">Offering</p>{" "}
       </NavLink>
       <NavLink
         to={(path = "/choosepickup")}
         className="tab"
-        activeClassName="validTab">
+        activeClassName="validTab"
+      >
         {" "}
-        Pick-up{" "}
+        <p className="tab-text">Pick-up</p>{" "}
       </NavLink>
     </div>
   );
