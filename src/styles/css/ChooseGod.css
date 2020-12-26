@@ -1,99 +1,129 @@
-.container-god-slide{
-    font-family: 'Roboto', 'Sans Serif';
-    background-image: linear-gradient(to right top, #d0d3c5, #bfcdba, #aac7b4, #93c1b3, #79bbb6, #66acac, #539ca2, #408d98, #30737c, #205a61, #114247, #032b2f);
-    margin: auto;
-    width: 100%;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    color: 3px 3px black;
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    transition: 1s;
-    animation: fadein 2s;
-    -moz-animation: fadein 2s; /* Firefox */
-    -webkit-animation: fadein 2s; /* Safari et Chrome */
-    -o-animation: fadein 2s; /* Opera */
+.container-god-slide {
+  font-family: "Roboto", "Sans Serif";
+  background-image: linear-gradient(
+    to right top,
+    #d0d3c5,
+    #bfcdba,
+    #aac7b4,
+    #93c1b3,
+    #79bbb6,
+    #66acac,
+    #539ca2,
+    #408d98,
+    #30737c,
+    #205a61,
+    #114247,
+    #032b2f
+  );
+  margin: auto;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: 3px 3px black;
+
+  /* top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); */
+  transition: 1s;
+  animation: fadein 2s;
+  -moz-animation: fadein 2s; /* Firefox */
+  -webkit-animation: fadein 2s; /* Safari et Chrome */
+  -o-animation: fadein 2s; /* Opera */
+  position: relative;
 }
 
 .god-slide {
-    outline: none;
+  outline: none;
+  text-align: center;
 }
 
-.gods-slide-title{
-    color: var(--dark);
-    filter: drop-shadow(0px 0px 15px white);
-    letter-spacing: 0.4em;
-    text-align: center;
+.gods-slide-title {
+  color: var(--dark);
+  filter: drop-shadow(0px 0px 15px white);
+  letter-spacing: 0.4em;
+  text-align: center;
 }
-
 
 .god-slide-name {
-    color: var(--blue);
-    filter: drop-shadow(0px 0px 10px white );
-    letter-spacing: 0.8em;
-
+  color: var(--blue);
+  filter: drop-shadow(0px 0px 10px white);
+  letter-spacing: 0.8em;
 }
 
 .slick-slide {
-    padding-top: 3em;
-    padding-bottom: 3em;
+  padding-top: 3em;
+  padding-bottom: 3em;
 }
 
 .slick-slider {
-    margin-top: 1.5em
+  margin-top: 1.5em;
 }
 
 .slick-slide img {
-    display: block;
-    margin: auto;
-    filter: drop-shadow(0px 0px 25px white);
+  margin: 0 auto;
+  max-width: 100%;
+  filter: drop-shadow(0px 0px 25px white);
 }
 
 .slick-next {
-    right: 0px;
+  right: 0px;
 }
 
 .slick-prev {
-    left: 0px;
+  left: 0px;
 }
 
-h3 {
-    text-align: center;
+.gods-slide-title {
+  text-align: center;
+  font-size: 1em;
 }
-    
+
+.text-transition .text-transition_inner {
+  transform: translate(-10%, -50%);
+  width: 100%;
+}
+
 @keyframes fadein {
-    from {
-        opacity:0;
-    }
-    to {
-        opacity:1;
-    }
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
-@-moz-keyframes fadein { /* sur Firefox */
-    from {
-        opacity:0;
-    }
-    to {
-        opacity:1;
-    }
+@-moz-keyframes fadein {
+  /* sur Firefox */
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
-@-webkit-keyframes fadein { /* sur Safari et Chrome */
-    from {
-        opacity:0;
-    }
-    to {
-        opacity:1;
-    }
+@-webkit-keyframes fadein {
+  /* sur Safari et Chrome */
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
-@-o-keyframes fadein { /* sur Opera */
-    from {
-        opacity:0;
-    }
-    to {
-        opacity: 1;
-    }
+@-o-keyframes fadein {
+  /* sur Opera */
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .gods-slide-title {
+    text-align: center;
+    font-size: 1.3em;
+  }
 }

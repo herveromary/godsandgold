@@ -48,37 +48,37 @@ const PickUp = ({ location }) => {
     });
   };
   return (
-    <div className="pickup">
+    <div className='pickup'>
       <Topbar />
-      <div>
-        <h2 className="chooseRequest-title">Prepare your offering</h2>
-        <RecapCard details={recap} />
-        <h3 className="titleH3PickUp">Pick up time</h3>
-        <form className="formPickUp" onSubmit={handleSubmit}>
-          <div className="calendar">
-            <Calendar
-              className="customCalendar"
-              onChange={setDate}
-              value={date}
-            />
-          </div>
-          <div className="formInput">
-            <label htmlFor="address">Address</label>
-            <input
-              name="address"
-              id="address"
-              className="inputPickUp"
-              type="text"
-              placeholder="Efpolidos Street, Athens"
-              value={address}
-              onChange={handleChange}
-            />
-          </div>
-          <button className="buttonPickUp" type="submit" onClick={sendRequest}>
-            Send
-          </button>
-        </form>
-      </div>
+
+      <h2 className='chooseRequest-title'>Prepare your offering</h2>
+      <RecapCard details={recap} />
+      <h3 className='titleH3PickUp'>Pick up time</h3>
+      <form className='formPickUp' onSubmit={handleSubmit}>
+        <div className='calendar'>
+          <Calendar
+            className='customCalendar'
+            onChange={setDate}
+            value={date}
+          />
+        </div>
+        <div className='formInput'>
+          <label htmlFor='address'>Address</label>
+          <input
+            name='address'
+            id='address'
+            className='inputPickUp'
+            type='text'
+            placeholder='Efpolidos Street, Athens'
+            value={address}
+            onChange={handleChange}
+          />
+        </div>
+        <button className='buttonPickUp' type='submit' onClick={sendRequest}>
+          Send
+        </button>
+      </form>
+
       <BottomNav />
     </div>
   );

@@ -3,8 +3,8 @@
   text-decoration: none;
   border: solid 1px var(--red);
   width: 25vw;
-  padding: 8px;
-  margin-top: 16px;
+  padding: 16px;
+  background-color: var(--light);
   font-family: "Gelios";
 }
 
@@ -18,15 +18,15 @@
   text-decoration: none;
   border: solid 1px var(--red);
   width: 25vw;
-  padding: 8px;
-  margin-top: 16px;
+  padding: 16px;
   background-color: var(--red);
 }
 
 .fullBar {
   display: flex;
   text-align: center;
-  position: absolute;
-  bottom: 0;
   width: 100%;
+  position: fixed;
+  bottom: 0;
+  z-index: 1000;
 }

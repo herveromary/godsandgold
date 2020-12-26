@@ -1,7 +1,7 @@
 .offeringpage {
   min-height: 100vh;
+  margin: auto;
   position: relative;
-  padding-bottom: 2rem;
 }
 
 .selectGift {
@@ -9,14 +9,18 @@
   flex-wrap: wrap;
   text-align: center;
   justify-content: center;
+  max-width: 600px;
+  margin: auto;
+  padding: 60px 0 100px 0;
 }
 
 .offerButton {
   padding: 8px;
   background-image: linear-gradient(to bottom right, var(--dark), var(--blue));
   border-radius: 10px;
-  margin: 16px 8px;
-  width: 6rem;
+  margin: 8px;
+  width: 130px;
+  height: 130px;
   box-shadow: 8px 8px 10px var(--dark);
 }
 

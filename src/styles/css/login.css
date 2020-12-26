@@ -1,8 +1,6 @@
 .login_page {
   min-height: 100vh;
   position: relative;
-  padding-bottom: 5rem;
-  top: 0;
   background-color: --lightblue;
   color: --darkblue;
   display: flex;
@@ -58,7 +56,7 @@
 }
 .login_app_description {
   margin-top: -30px;
-  padding: 10%;
+  padding: 8% 1%;
   font-size: 1.5rem;
   font-style: italic;
   margin-bottom: 50px;
@@ -74,9 +72,8 @@
   border: none;
   border-radius: 50px;
   border-spacing: 10px;
-  margin: 10px;
   width: 70%;
-  margin: 30px auto;
+  margin: 20px auto;
 }
 
 .login-slide-title {
