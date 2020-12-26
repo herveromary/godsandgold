@@ -1,9 +1,10 @@
 import { useState, useEffect } from "react";
 import { useHistory } from "react-router-dom";
+import axios from "axios";
 import Slider from "react-slick";
 import BottomNav from "../../Reusable/BottomNav";
 import "../../styles/css/ChooseGod.css";
-import gods from "./godsArray";
+
 import TextTransition, { presets } from "react-text-transition";
 
 const ChooseGod = () => {
@@ -28,7 +29,7 @@ const ChooseGod = () => {
 
   let history = useHistory();
 
-  /* const [god, setGod] = useState(); */
+  const [gods, setGods] = useState([]);
 
   const handleClick = (e) => {
     const choosenGod = gods.filter((god) => god.name === e.target.alt);
@@ -41,38 +42,36 @@ const ChooseGod = () => {
       () => setIndex((index) => index + 1),
       1500 // every 3 seconds
     );
-  }, []);
 
-  /* const [gods, setGods] = useState([]);
-
-  useEffect(() => {
     axios
-      .get("http://localhost:3000/api/gods")
+      .get("http://localhost:8080/api/gods")
       .then((response) => response.data)
       .then((data) => setGods(data));
-  }, []); */
+  }, []);
 
   return (
-    <div className="container-god-slide">
-      <h3 className="gods-slide-title">
+    <div className='container-god-slide'>
+      <h3 className='gods-slide-title'>
         <TextTransition
           text={TEXTS[index % TEXTS.length]}
           springConfig={presets.wobbly}
         />
       </h3>
       <Slider {...settings}>
-        {gods.map((god) => (
-          <div key={god.id} className="god-slide">
-            <img
-              onClick={handleClick}
-              className="god-slide-image"
-              src={god.picture}
-              alt={god.name}
-            />
-            <h3 className="god-slide-name">{god.name}</h3>
-          </div>
-        ))}
+        {gods &&
+          gods.map((god) => (
+            <div key={god.id} className='god-slide'>
+              <img
+                onClick={handleClick}
+                className='god-slide-image'
+                src={god.picture}
+                alt={god.name}
+              />
+              <h3 className='god-slide-name'>{god.name}</h3>
+            </div>
+          ))}
       </Slider>
+
       <BottomNav />
     </div>
   );
