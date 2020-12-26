@@ -3,6 +3,7 @@
   margin: auto;
   position: relative;
   padding-bottom: 50px;
+  overflow-x: hidden;
 }
 .textsChoosePickUp {
   word-wrap: break-word;

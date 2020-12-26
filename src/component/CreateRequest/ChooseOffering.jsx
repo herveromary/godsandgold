@@ -20,10 +20,10 @@ const ChooseOffering = () => {
   const [selectMoney, setSelectMoney] = useState(false);
 
   return (
-    <div className="offeringpage">
+    <div className='offeringpage'>
       <Topbar />
-      <h2 className="offering-title"> What do you want to offer ? </h2>
-      <div className="selectGift">
+      <h2 className='chooseRequest-title '> What do you want to offer ? </h2>
+      <div className='selectGift'>
         <div
           onClick={() => setSelectWine(true)}
           className={selectWine ? "offerButtonused" : "offerButton"}
@@ -36,7 +36,7 @@ const ChooseOffering = () => {
             }}
           >
             <p> Galleon of wine</p>
-            <img src={wine} alt="wine"></img>
+            <img src={wine} alt='wine'></img>
           </DelayLink>
         </div>
         <div
@@ -51,7 +51,7 @@ const ChooseOffering = () => {
             }}
           >
             <p> Sacrificial Animal</p>
-            <img src={animal} alt="animal"></img>
+            <img src={animal} alt='animal'></img>
           </DelayLink>
         </div>
         <div
@@ -66,7 +66,7 @@ const ChooseOffering = () => {
             }}
           >
             <p> Family Member</p>
-            <img src={family} alt="family"></img>
+            <img src={family} alt='family'></img>
           </DelayLink>
         </div>
         <div
@@ -81,7 +81,7 @@ const ChooseOffering = () => {
             }}
           >
             <p> Fruit basket</p>
-            <img src={fruit} alt="fruits"></img>
+            <img src={fruit} alt='fruits'></img>
           </DelayLink>
         </div>
         <div
@@ -93,7 +93,7 @@ const ChooseOffering = () => {
             to={{ pathname: `/choosepickup`, state: { offering: "money" } }}
           >
             <p> Oboli and drachma</p>
-            <img src={coin} alt="coins"></img>
+            <img src={coin} alt='coins'></img>
           </DelayLink>
         </div>
         <div
@@ -106,10 +106,10 @@ const ChooseOffering = () => {
               pathname: `/choosepickup`,
               state: { offering: "precious and beautiful jewels" },
             }}
-            className="offerButton"
+            className='offerButton'
           >
             <p> Precious jewelry</p>
-            <img src={jewels} alt="diamonds"></img>
+            <img src={jewels} alt='diamonds'></img>
           </DelayLink>
         </div>
       </div>
