@@ -6,11 +6,9 @@ import "../../styles/css/ChooseGod.css";
 import gods from "./godsArray";
 import TextTransition, { presets } from "react-text-transition";
 
-let userName = JSON.parse(localStorage.getItem("user")).login;
-
 const ChooseGod = () => {
   const TEXTS = [
-    `Hello ${userName}`,
+    `Hello`,
     "Choose Your God",
     "Make your request",
     "Make an offering",
@@ -39,10 +37,7 @@ const ChooseGod = () => {
   };
 
   useEffect(() => {
-    const intervalId = setInterval(
-      () => setIndex((index) => index + 1),
-      1500 // every 3 seconds
-    );
+    const intervalId = setInterval(() => setIndex((index) => index + 1), 1500);
   }, []);
 
   /* const [gods, setGods] = useState([]);

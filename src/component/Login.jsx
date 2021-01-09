@@ -34,6 +34,7 @@ function Login() {
   };
 
   const signIn = () => {
+    console.log("ok");
     const u = {
       login: user,
       password: "123456",
@@ -72,13 +73,13 @@ function Login() {
             className="input"
             required
           />
-          {/* <div className="form-data"> */}
-          <button type="button" onClick={() => signIn()}>
-            Make an offering !
-          </button>
-          <p className="are_you_a_god">Are you a God ? Upgrade to Pro plan</p>
-          {redirect && <Redirect to="/ChooseGod" />}
-          {/* </div> */}
+          <div className="form-data">
+            <button type="button" onClick={() => signIn()}>
+              Make an offering !
+            </button>
+            <p className="are_you_a_god">Are you a God ? Upgrade to Pro plan</p>
+            {redirect && <Redirect to="/ChooseGod" />}
+          </div>
         </div>
       </div>
     </div>
