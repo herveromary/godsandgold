@@ -17,6 +17,9 @@
     #114247,
     #032b2f
   );
+  position: relative;
+  min-height: 100vh;
+  /* padding-bottom: 2rem; */
 }
 
 .App,

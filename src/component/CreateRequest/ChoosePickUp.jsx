@@ -48,37 +48,49 @@ const PickUp = ({ location }) => {
     });
   };
   return (
-    <div className='pickup'>
+    <div className="choose-pickup-global">
       <Topbar />
-
-      <h2 className='chooseRequest-title'>Prepare your offering</h2>
-      <RecapCard details={recap} />
-      <h3 className='titleH3PickUp'>Pick up time</h3>
-      <form className='formPickUp' onSubmit={handleSubmit}>
-        <div className='calendar'>
-          <Calendar
-            className='customCalendar'
-            onChange={setDate}
-            value={date}
-          />
+      <div className="pickup">
+        <h2 className="choosePickup-title">Prepare your offering</h2>
+        <div className="desktop-recap-container">
+          <div className="card-pickup">
+            <RecapCard details={recap} />
+          </div>
+          <div className="desktop-form-container">
+            <form className="formPickUp" onSubmit={handleSubmit}>
+              <h3 className="titleH3PickUp">Pick up time</h3>
+              <div className="calendar">
+                <Calendar
+                  className="customCalendar"
+                  onChange={setDate}
+                  value={date}
+                />
+              </div>
+              <div className="formInput">
+                <label className="input-adress-label" htmlFor="address">
+                  Address
+                </label>
+                <input
+                  name="address"
+                  id="address"
+                  className="inputPickUp"
+                  type="text"
+                  placeholder="Efpolidos Street, Athens"
+                  value={address}
+                  onChange={handleChange}
+                />
+              </div>
+              <button
+                className="buttonPickUp"
+                type="submit"
+                onClick={sendRequest}
+              >
+                Send
+              </button>
+            </form>
+          </div>
         </div>
-        <div className='formInput'>
-          <label htmlFor='address'>Address</label>
-          <input
-            name='address'
-            id='address'
-            className='inputPickUp'
-            type='text'
-            placeholder='Efpolidos Street, Athens'
-            value={address}
-            onChange={handleChange}
-          />
-        </div>
-        <button className='buttonPickUp' type='submit' onClick={sendRequest}>
-          Send
-        </button>
-      </form>
-
+      </div>
       <BottomNav />
     </div>
   );

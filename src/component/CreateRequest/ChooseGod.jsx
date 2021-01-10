@@ -9,12 +9,12 @@ import TextTransition, { presets } from "react-text-transition";
 
 const ChooseGod = () => {
   const TEXTS = [
-    `Hello `,
+    `Hello`,
     "Choose Your God",
     "Make your request",
     "Make an offering",
-    "We may make your",
-    "wishes come true!",
+    "We may make your...",
+    "...wishes come true!",
   ];
 
   const settings = {
@@ -55,6 +55,7 @@ const ChooseGod = () => {
         <TextTransition
           text={TEXTS[index % TEXTS.length]}
           springConfig={presets.wobbly}
+          noOverflow={true}
         />
       </h3>
       <Slider {...settings}>

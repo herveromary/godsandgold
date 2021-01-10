@@ -3,9 +3,10 @@
   text-decoration: none;
   border: solid 1px var(--red);
   width: 25vw;
-  padding: 16px;
-  background-color: var(--light);
+  padding: 8px;
   font-family: "Gelios";
+  font-size: 2em;
+  vertical-align: middle;
 }
 
 .tab:hover {
@@ -18,15 +19,41 @@
   text-decoration: none;
   border: solid 1px var(--red);
   width: 25vw;
-  padding: 16px;
+  padding: 8px;
   background-color: var(--red);
 }
 
 .fullBar {
   display: flex;
   text-align: center;
-  width: 100%;
-  position: fixed;
   bottom: 0;
-  z-index: 1000;
+  width: 100%;
+  height: 8vh;
+}
+
+.tab-text {
+  margin: 0.2em 0;
+}
+
+@media screen and (max-width: 750px) {
+  .fullBar {
+    font-size: 0.6em;
+    height: 7vh;
+  }
+  
+
+}
+
+@media screen and (max-width: 360px) {
+
+  .fullBar {
+    font-size: 0.5em;
+  }
+
+}
+
+@media screen and (orientation: landscape) and (max-height: 768px) {
+  .fullBar {
+    display: none;
+  }
 }

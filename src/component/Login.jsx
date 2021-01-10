@@ -1,8 +1,6 @@
 import React, { useState, useContext, useEffect } from "react";
 import axios from "axios";
 import { Redirect, useHistory } from "react-router-dom";
-import { GGContext } from "../Context";
-import Topbar from "../Reusable/Topbar";
 import "../styles/css/login.css";
 import logo from "../images/logo_GodsAndGold.png";
 import TextTransition, { presets } from "react-text-transition";
@@ -11,7 +9,7 @@ const TEXTS = [
   "Choose Your God",
   "Make your request",
   "Make an offering",
-  "wishes come true!",
+  "Wishes come true!",
 ];
 
 function Login() {
@@ -19,6 +17,10 @@ function Login() {
   const [redirect, setRedirect] = useState(false);
 
   const [index, setIndex] = useState(0);
+
+  useEffect(() => {
+    const intervalId = setInterval(() => setIndex((index) => index + 1), 1500);
+  }, []);
 
   //let history = useHistory();
   /*   const [input, setInput] = useState({
@@ -32,6 +34,7 @@ function Login() {
   };
 
   const signIn = () => {
+    console.log("ok");
     const u = {
       login: user,
       password: "123456",
@@ -47,22 +50,15 @@ function Login() {
     setRedirect(true);
   };
 
-  const TEXTS = [
-    "Choose Your God",
-    "Make your request",
-    "Make an offering",
-    "wishes come true!",
-  ];
-
   return (
-    <>
-      {/* <Topbar /> */}
-      <div className="login_page">
-        <img className="login_logo" src={logo} />
+    <div className="login_page">
+      <img className="login_logo" src={logo} />
+      <div className="desktop-flexbox-text-and-form">
         <h3 className="login_app_description">
           <TextTransition
             text={TEXTS[index % TEXTS.length]}
             springConfig={presets.wobbly}
+            noOverflow={true}
           />
         </h3>
 
@@ -86,7 +82,7 @@ function Login() {
           </div>
         </div>
       </div>
-    </>
+    </div>
   );
 }
 
