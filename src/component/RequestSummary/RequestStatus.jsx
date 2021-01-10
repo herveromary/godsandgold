@@ -8,11 +8,6 @@ const RequestStatus = () => {
   const [redirectLogin, setRedirectLogin] = useState(false);
 
   const history = useHistory();
-
-  // const handleOnSubmitOn = (event) => {
-  //   event.preventDefault();
-  //   history.push("/choosegod");
-  // };
   const chooseGod = () => {
     setRedirect(true);
   };

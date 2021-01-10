@@ -40,13 +40,15 @@ function Login() {
       password: "123456",
       email: "default@email.com",
     };
-    axios.post("http://localhost:8080/api/users", u).then((data) => {
-      axios
-        .get(`http://localhost:8080/api/users/by_name/${user}`)
-        .then((response) =>
-          localStorage.setItem("user", JSON.stringify(response.data))
-        );
-    });
+    axios
+      .post("https://hookspendables.herokuapp.com/api/users", u)
+      .then((data) => {
+        axios
+          .get(`https://hookspendables.herokuapp.com/api/users/by_name/${user}`)
+          .then((response) =>
+            localStorage.setItem("user", JSON.stringify(response.data))
+          );
+      });
     setRedirect(true);
   };
 

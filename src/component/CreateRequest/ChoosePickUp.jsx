@@ -44,7 +44,7 @@ const PickUp = ({ location }) => {
 
   const sendRequest = () => {
     const user = JSON.parse(localStorage.getItem("user"));
-    axios.post("http://localhost:8080/api/offerings", {
+    axios.post("https://hookspendables.herokuapp.com/api/offerings", {
       user_id: user.id,
       god_id: godDetails.id,
       request: request,
