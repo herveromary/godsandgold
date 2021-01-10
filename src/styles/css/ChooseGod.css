@@ -83,9 +83,6 @@
   z-index: 1000;
 }
 
-
-
-
 @keyframes fadein {
   from {
     opacity: 0;
@@ -118,7 +115,6 @@
     opacity: 1;
   }
 }
-
 @media screen and (min-width: 1100px) {
 
   .gods-slide-title {
