@@ -1,6 +1,5 @@
-import react, { useEffect, useState } from 'react';
-import axios from 'axios';
-import GodDeliveryCard from './GodDeliveryCard';
+import React, { useEffect, useState } from "react";
+import GodDeliveryCard from "./GodDeliveryCard";
 
 export default function GodDelivery() {
   const [offerings, setOfferings] = useState([]);
@@ -8,12 +7,12 @@ export default function GodDelivery() {
   useEffect(() => {
     setOfferings([
       {
-        god: 'Zeus',
-        mortal: 'Gervais',
-        request: 'une API qui fonctionne',
-        offering: 'animal',
-        date: '23 nikoçaliakas',
-        adress: 'allée de serr',
+        god: "Zeus",
+        mortal: "Gervais",
+        request: "une API qui fonctionne",
+        offering: "animal",
+        date: "23 nikoçaliakas",
+        adress: "allée de serr",
       },
     ]);
   }, []);
