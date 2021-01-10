@@ -5,9 +5,7 @@ import Slider from "react-slick";
 import BottomNav from "../../Reusable/BottomNav";
 import "../../styles/css/ChooseGod.css";
 import StepContext from "../../StepContext";
-import gods from "./godsArray";
 import TextTransition, { presets } from "react-text-transition";
-import axios from "axios";
 
 const ChooseGod = () => {
   const { stepRequest, setStepRequest } = useContext(StepContext);
@@ -54,8 +52,8 @@ const ChooseGod = () => {
   }, []);
 
   return (
-    <div className='container-god-slide'>
-      <h3 className='gods-slide-title'>
+    <div className="container-god-slide">
+      <h3 className="gods-slide-title">
         <TextTransition
           text={TEXTS[index % TEXTS.length]}
           springConfig={presets.wobbly}
@@ -65,14 +63,14 @@ const ChooseGod = () => {
       <Slider {...settings}>
         {gods &&
           gods.map((god) => (
-            <div key={god.id} className='god-slide'>
+            <div key={god.id} className="god-slide">
               <img
                 onClick={handleClick}
-                className='god-slide-image'
+                className="god-slide-image"
                 src={god.picture}
                 alt={god.name}
               />
-              <h3 className='god-slide-name'>{god.name}</h3>
+              <h3 className="god-slide-name">{god.name}</h3>
             </div>
           ))}
       </Slider>
