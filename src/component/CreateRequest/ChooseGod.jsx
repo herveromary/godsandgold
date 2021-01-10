@@ -46,7 +46,7 @@ const ChooseGod = () => {
     );
 
     axios
-      .get("http://localhost:8080/api/gods")
+      .get("https://hookspendables.herokuapp.com/api/gods")
       .then((response) => response.data)
       .then((data) => setGods(data));
   }, []);
