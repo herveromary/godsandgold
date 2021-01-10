@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
+import StepContext from "../../StepContext";
 import Topbar from "../../Reusable/Topbar";
 import "../../styles/css/ChooseOffering.css";
 import DelayLink from "react-delay-link";
@@ -11,6 +12,7 @@ import wine from "../../styles/grapes.png";
 import coin from "../../styles/money.png";
 
 const ChooseOffering = () => {
+  const { stepRequest, setStepRequest } = useContext(StepContext);
   const [offering, setOffering] = useState("");
   const [selectWine, setSelectWine] = useState(false);
   const [selectAnimal, setSelectAnimal] = useState(false);
@@ -19,6 +21,11 @@ const ChooseOffering = () => {
   const [selectJewel, setSelectJewel] = useState(false);
   const [selectMoney, setSelectMoney] = useState(false);
 
+  const handleOffering = () => {
+    setSelectWine(true);
+    setStepRequest({ ...stepRequest, stepThree: true });
+  };
+
   return (
     <div className="offeringpage-global">
       <Topbar />
@@ -26,7 +33,9 @@ const ChooseOffering = () => {
         <h2 className="offering-title"> What do you want to offer ? </h2>
         <div className="selectGift">
           <div
-            onClick={() => setSelectWine(true)}
+            onClick={() => {
+              handleOffering();
+            }}
             className={selectWine ? "offerButtonused" : "offerButton"}
           >
             <DelayLink
@@ -41,7 +50,9 @@ const ChooseOffering = () => {
             </DelayLink>
           </div>
           <div
-            onClick={() => setSelectAnimal(true)}
+            onClick={() => {
+              handleOffering();
+            }}
             className={selectAnimal ? "offerButtonused" : "offerButton"}
           >
             <DelayLink
@@ -56,7 +67,9 @@ const ChooseOffering = () => {
             </DelayLink>
           </div>
           <div
-            onClick={() => setSelectHuman(true)}
+            onClick={() => {
+              handleOffering();
+            }}
             className={selectHuman ? "offerButtonused" : "offerButton"}
           >
             <DelayLink
@@ -71,7 +84,9 @@ const ChooseOffering = () => {
             </DelayLink>
           </div>
           <div
-            onClick={() => setSelectFruit(true)}
+            onClick={() => {
+              handleOffering();
+            }}
             className={selectFruit ? "offerButtonused" : "offerButton"}
           >
             <DelayLink
@@ -88,7 +103,9 @@ const ChooseOffering = () => {
             </DelayLink>
           </div>
           <div
-            onClick={() => setSelectMoney(true)}
+            onClick={() => {
+              handleOffering();
+            }}
             className={selectMoney ? "offerButtonused" : "offerButton"}
           >
             <DelayLink
@@ -100,7 +117,9 @@ const ChooseOffering = () => {
             </DelayLink>
           </div>
           <div
-            onClick={() => setSelectJewel(true)}
+            onClick={() => {
+              handleOffering();
+            }}
             className={selectJewel ? "offerButtonused" : "offerButton"}
           >
             <DelayLink

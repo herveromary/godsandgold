@@ -1,4 +1,6 @@
 import { useHistory } from "react-router-dom";
+import { useEffect, useContext } from "react";
+import StepContext from "../../StepContext";
 import React, { useState } from "react";
 import Calendar from "react-calendar";
 import "../../styles/css/ChoosePickUp.css";
@@ -9,6 +11,12 @@ import axios from "axios";
 import BottomNav from "../../Reusable/BottomNav";
 
 const PickUp = ({ location }) => {
+  const { stepRequest, setStepRequest } = useContext(StepContext);
+
+  /* useEffect(() => {
+    setStepRequest({ ...stepRequest, stepThree: true });
+  }, []); */
+
   const { offering } = location.state;
 
   const [date, setDate] = useState(new Date());
@@ -36,7 +44,7 @@ const PickUp = ({ location }) => {
 
   const sendRequest = () => {
     const user = JSON.parse(localStorage.getItem("user"));
-    axios.post("http://localhost:3000/api/offerings", {
+    axios.post("http://localhost:8080/api/offerings", {
       user_id: user.id,
       god_id: godDetails.id,
       request: request,

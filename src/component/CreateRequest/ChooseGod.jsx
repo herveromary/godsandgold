@@ -1,12 +1,15 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useContext } from "react";
 import { useHistory } from "react-router-dom";
 import Slider from "react-slick";
 import BottomNav from "../../Reusable/BottomNav";
 import "../../styles/css/ChooseGod.css";
+import StepContext from "../../StepContext";
 import gods from "./godsArray";
 import TextTransition, { presets } from "react-text-transition";
+import axios from "axios";
 
 const ChooseGod = () => {
+  const { stepRequest, setStepRequest } = useContext(StepContext);
   const TEXTS = [
     `Hello`,
     "Choose Your God",
@@ -31,6 +34,7 @@ const ChooseGod = () => {
   /* const [god, setGod] = useState(); */
 
   const handleClick = (e) => {
+    setStepRequest({ ...stepRequest, stepOne: true });
     const choosenGod = gods.filter((god) => god.name === e.target.alt);
     localStorage.setItem("choosenGod", JSON.stringify(choosenGod[0]));
     history.push("/chooserequest");
@@ -40,14 +44,15 @@ const ChooseGod = () => {
     const intervalId = setInterval(() => setIndex((index) => index + 1), 1500);
   }, []);
 
-  /* const [gods, setGods] = useState([]);
+  const [gods, setGods] = useState([]);
 
   useEffect(() => {
     axios
-      .get("http://localhost:3000/api/gods")
+      .get("http://localhost:8080/api/gods")
       .then((response) => response.data)
-      .then((data) => setGods(data));
-  }, []); */
+      .then((data) => setGods(data))
+      .then(console.log("test"));
+  }, []);
 
   return (
     <div className="container-god-slide">

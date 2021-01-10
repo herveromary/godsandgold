@@ -1,10 +1,14 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
+import StepContext from "../../StepContext";
 import { useHistory } from "react-router-dom";
 import "../../styles/css/ChooseRequest.css";
 import Topbar from "../../Reusable/Topbar";
 import BottomNav from "../../Reusable/BottomNav";
 
 const ChooseRequest = () => {
+  const { stepRequest, setStepRequest } = useContext(StepContext);
+  console.log(stepRequest);
+
   const [request, setrequest] = useState();
   let history = useHistory();
 
@@ -14,6 +18,7 @@ const ChooseRequest = () => {
 
   const handleOnSubmit = (e) => {
     e.preventDefault();
+    setStepRequest({ ...stepRequest, stepTwo: true });
     localStorage.setItem("request", request);
     history.push("/chooseoffering");
   };
