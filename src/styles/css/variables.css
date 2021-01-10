@@ -1,7 +1,15 @@
 :root {
-  --light: whitesmoke;
+  --verylight: whitesmoke;
+  --light: rgb(208, 211, 197);
   --dark: rgb(3, 43, 47);
   --lightblue: #d7f3f8;
   --blue: rgb(8, 112, 138);
-  --red: rgb(215, 58, 49);
+  --red: rgb(223, 89, 77);
+  --other-red: rgb(171, 29, 41);
 }
+
+@font-face {
+  font-family: "Gelios";
+  src: url("../assets/gelio.fasolada.ttf") format("truetype");
+}
+@import url("https://fonts.googleapis.com/css2?family=Fredericka+the+Great&display=swap");

@@ -1,0 +1,171 @@
+.container-god-slide {
+  font-family: "Roboto", "Sans Serif";
+  background-image: linear-gradient(
+    to right top,
+    #d0d3c5,
+    #bfcdba,
+    #aac7b4,
+    #93c1b3,
+    #79bbb6,
+    #66acac,
+    #539ca2,
+    #408d98,
+    #30737c,
+    #205a61,
+    #114247,
+    #032b2f
+  );
+  margin: auto;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  color: 3px 3px black;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: 1s;
+  animation: fadein 2s;
+  -moz-animation: fadein 2s;
+  -webkit-animation: fadein 2s;
+  -o-animation: fadein 2s;
+}
+
+.god-slide {
+  outline: none;
+}
+
+.gods-slide-title {
+  color: var(--dark);
+  filter: drop-shadow(0px 0px 15px white);
+  letter-spacing: 0.4em;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  font-size: 1.1em;
+  margin: auto;
+  margin-bottom: 0;
+}
+
+.god-slide-name {
+  color: var(--blue);
+  filter: drop-shadow(0px 0px 10px white);
+  letter-spacing: 1em;
+  font-size: 1em;
+  margin-top: 2em;
+  text-align: center;
+}
+
+.slick-slide {
+  padding-top: 3em;
+  padding-bottom: 3em;
+}
+
+.slick-slider {
+  margin-top: 1.5em;
+  margin-bottom: 3em;
+}
+
+.slick-slide img {
+  display: block;
+  filter: drop-shadow(0px 0px 25px white);
+  margin: auto;
+}
+
+.slick-next {
+  right: 20px;
+}
+
+.slick-prev {
+  left: 20px;
+  z-index: 1000;
+}
+
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@-moz-keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@-webkit-keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@-o-keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@media screen and (min-width: 1100px) {
+
+  .gods-slide-title {
+    margin: auto;
+  }
+  
+  .gods-slide-title {
+    font-size: 2em;
+  }
+
+  .slick-next {
+    right: 400px;
+  }
+  
+  .slick-prev {
+    left: 400px;
+    z-index: 1000;
+  }
+  
+  .slick-slide img {
+  width: 500px;
+  }
+
+}
+
+@media screen and (min-height: 750px) {
+  .gods-slide-title {
+    margin: auto;
+  }
+}
+
+@media screen and (min-height: 1000px) {
+  .gods-slide-title {
+    margin: auto;
+  }
+
+  .gods-slide-title {
+    font-size: 2em;
+  }
+
+  .slick-next {
+    right: 200px;
+  }
+  
+  .slick-prev {
+    left: 200px;
+    z-index: 1000;
+  }
+  
+  .slick-slide img {
+  width: 500px;
+  }
+
+}

@@ -1,18 +1,53 @@
-.titleH1PickUp {
+.choose-pickup-global {
+  min-height: 100vh;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  justify-content: space-between;
 }
+
+.card-pickup {
+  margin: 2vh auto;
+  width: 280px;
+}
+
+.pickup {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex: 1;
+}
+
+.choosePickup-title {
+  background-color: var(--light);
+  color: var(--blue);
+  text-align: center;
+  padding: 16px;
+  margin: 0;
+}
+
 .textsChoosePickUp {
-  margin: 0 auto 30px;
-  padding: 15px 30px;
-  max-width: 300px;
+  word-wrap: break-word;
+  padding: 1px 20px;
+  max-width: 280px;
   color: var(--blue);
   background-color: var(--lightblue);
   border-radius: 20px;
 }
-.titleH2PickUp {
+.titleRecap {
+  padding-bottom: 10px;
+  border-bottom: 1px solid;
+}
+.textPickUpDate {
+  font-family: "Gelios";
+}
+.titleH3PickUp {
   display: flex;
   justify-content: center;
+  padding: 16px;
+  margin: 0px;
+  color: var(--dark);
+  font-weight: bold;
+  font-size: 20px;
 }
 .calendar {
   display: flex;
@@ -20,7 +55,6 @@
 }
 .customCalendar {
   border-radius: 15px;
-  padding: 10px;
 }
 .customCalendar abbr {
   text-decoration: none;
@@ -42,6 +76,15 @@
 .react-calendar__tile--now:enabled:focus {
   background: var(--lightblue);
 }
+.customCalendar .react-calendar__navigation__label::before {
+  content: "Nikossaliagas";
+  font-family: "Gelios";
+  font-size: 20px;
+  letter-spacing: 1px;
+}
+.customCalendar .react-calendar__navigation__label__labelText {
+  display: none;
+}
 .formPickUp {
   display: flex;
   flex-direction: column;
@@ -52,6 +95,13 @@
   flex-direction: column;
   margin: 30px 15px 30px 15px;
 }
+
+.input-adress-label {
+  text-align: center;
+  font-weight: bolder;
+  color: var(--dark);
+}
+
 .inputPickUp {
   padding: 0 15px;
   width: 300px;
@@ -60,11 +110,13 @@
   border: 1px solid grey;
   font-size: 16px;
   margin-top: 5px;
+  align-self: center;
 }
 .buttonPickUp {
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-bottom: 30px;
   width: 200px;
   height: 46px;
   border-radius: 10px;
@@ -73,4 +125,44 @@
   font-weight: bold;
   color: var(--lightblue);
   background-color: var(--blue);
+}
+
+@media screen and (max-width: 330px) {
+
+  .calendar {
+    width: 95%;
+  }
+
+  .inputPickUp {
+    width: 80%;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  .desktop-recap-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex: 1;
+  }
+  .textsChoosePickUp {
+    height: 20vh;
+    align-self: center;
+    width: 500px;
+  }
+
+  .desktop-form-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .card-pickup {
+    margin: 0;
+    width: 280px;
+    height:28vh;
+    align-self: center;
+    transform: translateY(-6vh);
+
+  }
 }

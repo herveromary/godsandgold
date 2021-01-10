@@ -1,0 +1,40 @@
+.textConfirmation {
+  color: var(--dark);
+  text-align: center;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.confirm {
+  position: relative;
+  padding-bottom: 2rem;
+}
+
+.textsChoosePickUp {
+  word-wrap: break-word;
+  padding: 1px 20px;
+  max-width: 280px;
+  color: var(--blue);
+  background-color: var(--lightblue);
+  border-radius: 20px;
+}
+
+.card-confirm {
+  margin: auto;
+  max-width: 280px;
+}
+
+.thanks-text {
+  color: var(--dark);
+  text-align: center;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+@media screen and (min-width: 1000px) {
+  .textsChoosePickUp {
+    margin-top: 2vh !important;
+    transform: translateY(0) !important;
+    height: 28vh !important;
+  }
+}

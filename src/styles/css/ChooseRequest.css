@@ -1,28 +1,41 @@
-.ChooseRequest {
+.choose-request-global {
   min-height: 100vh;
-  margin: auto;
+  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  align-items: center;
-  overflow: hidden;
 }
 
+.ChooseRequest {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow: hidden;
+  flex: 1;
+}
+.desktop-responsive-flexbox{
+  width: 100%;
+  margin: 5vh auto 5vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
 .chooseRequest-title {
-  background-color: var(--lightblue);
+  background-color: var(--light);
+  color: var(--blue);
   text-align: center;
   padding: 16px;
-  width: 100%;
   margin: 0;
+  display: flex;
+  justify-content: center;
+  font-size: 1.2em;
 }
 
 .chooseRequest-form {
   width: 100%;
-  max-width: 500px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
 }
 
 #requestChoice {
@@ -37,13 +50,13 @@
 }
 
 .ChooseRequest button {
-  margin: 24px 0;
+  margin: 3vh 0;
   border-radius: 8px;
   padding: 16px 0;
   width: 69%;
   border-color: transparent;
   background-color: var(--blue);
-  color: var(--light);
+  color: var(--lightblue);
   font-size: 1.1em;
   transition: all 0.3s ease-in-out;
 }
@@ -52,11 +65,15 @@
   opacity: 0.8;
 }
 
+.mostCommonRequests-title {
+  text-align: center;
+}
+
 .diagram-box {
   font-size: 20px;
   width: 80%;
-  height: auto;
-  margin: 24px auto;
+  height: 28vh;
+  margin: 0 auto;
   background-color: #fff;
   border: 1px solid #cdcdcd;
   padding: 10px;
@@ -68,16 +85,71 @@
 }
 
 .diagram-bar {
-  width: 90%;
-  height: 50px;
+  width: 95%;
+  height: 5vh;
   position: relative;
   background: rgba(17, 17, 17, 0.3);
-  margin: 20px auto;
+  margin: 2vh auto;
   border-radius: 4px;
   -o-border-radius: 4px;
   -webkit-border-radius: 4px;
   -ms-border-radius: 4px;
   -moz-border-radius: 4px;
+}
+
+.diagram-text {
+  color: var(--dark);
+  transition: 4s;
+  animation: fadein 4s;
+  -moz-animation: fadein 4s;
+  -webkit-animation: fadein 4s;
+  -o-animation: fadein 4s;
+  margin-top: 1.5vh;
+}
+
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  75% {
+    opacity: 0
+  }
+  to {
+    opacity: 1;
+  }
+}
+@-moz-keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  75% {
+    opacity: 0
+  }
+  to {
+    opacity: 1;
+  }
+}
+@-webkit-keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  75% {
+    opacity: 0
+  }
+  to {
+    opacity: 1;
+  }
+}
+@-o-keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  75% {
+    opacity: 0
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 .diagram-1 {
@@ -86,9 +158,9 @@
   -webkit-animation: Animate-1 4s;
   -moz-animation: Animate-1 4s;
   -o-animation: Animate-1 4s;
-  height: 50px;
+  height: 5vh;
   position: absolute;
-  background-color: #ea8564;
+  background-color: rgb(234, 133, 100);
   border-radius: 4px;
   -o-border-radius: 4px;
   -webkit-border-radius: 4px;
@@ -97,7 +169,7 @@
 }
 @keyframes Animate-1 {
   from {
-    width: 10px;
+    width: 10%;
   }
   to {
     width: 90%;
@@ -105,7 +177,7 @@
 }
 @-webkit-keyframes Animate-1 {
   from {
-    width: 10px;
+    width: 10%;
   }
   to {
     width: 90%;
@@ -113,7 +185,7 @@
 }
 @-moz-keyframes Animate-1 {
   from {
-    width: 10px;
+    width: 10%;
   }
   to {
     width: 90%;
@@ -121,7 +193,7 @@
 }
 @-o-keyframes Animate-1 {
   from {
-    width: 10px;
+    width: 10%;
   }
   to {
     width: 90%;
@@ -134,7 +206,7 @@
   -moz-animation: Animate-2 5s;
   -o-animation: Animate-2 5s;
   width: 69%;
-  height: 50px;
+  height: 5vh;
   position: absolute;
   background-color: #55a69f;
   border-radius: 4px;
@@ -145,7 +217,7 @@
 }
 @keyframes Animate-2 {
   from {
-    width: 10px;
+    width: 10%;
   }
   to {
     width: 69%;
@@ -153,7 +225,7 @@
 }
 @-webkit-keyframes Animate-2 {
   from {
-    width: 10px;
+    width: 10%;
   }
   to {
     width: 69%;
@@ -161,7 +233,7 @@
 }
 @-moz-keyframes Animate-2 {
   from {
-    width: 10px;
+    width: 10%;
   }
   to {
     width: 69%;
@@ -169,7 +241,7 @@
 }
 @-o-keyframes Animate-2 {
   from {
-    width: 10px;
+    width: 10%;
   }
   to {
     width: 69%;
@@ -181,10 +253,10 @@
   -webkit-animation: Animate-3 5s;
   -moz-animation: Animate-3 5s;
   -o-animation: Animate-3 5s;
-  width: 52%;
-  height: 50px;
+  width: 62%;
+  height: 5vh;
   position: absolute;
-  background-color: #99856d;
+  background-color: rgb(153, 133, 109);
   border-radius: 4px;
   -o-border-radius: 4px;
   -webkit-border-radius: 4px;
@@ -193,34 +265,34 @@
 }
 @keyframes Animate-3 {
   from {
-    width: 10px;
+    width: 10%;
   }
   to {
-    width: 52%;
+    width: 62%;
   }
 }
 @-webkit-keyframes Animate-3 {
   from {
-    width: 10px;
+    width: 10%;
   }
   to {
-    width: 52%;
+    width: 62%;
   }
 }
 @-moz-keyframes Animate-3 {
   from {
-    width: 10px;
+    width: 10%;
   }
   to {
-    width: 52%;
+    width: 62%;
   }
 }
 @-o-keyframes Animate-3 {
   from {
-    width: 10px;
+    width: 10%;
   }
   to {
-    width: 52%;
+    width: 62%;
   }
 }
 
@@ -228,9 +300,97 @@
   z-index: 3;
   position: relative;
   padding-right: 15px;
-  margin-top: 15px;
+  margin-top: 1vh;
   float: right;
   text-shadow: none;
   color: #fff;
   font-size: 18px;
+}
+
+.request {
+  font-size: 0.68em;
+  z-index: 1;
+  float: left;
+  position: absolute;
+  padding-left: 4px;
+  text-shadow: none;
+}
+
+.mostCommonRequests-title {
+  margin: 0;
+  font-size: 1em;
+  text-align: center;
+  color: var(--blue)
+}
+
+@media screen and (max-height: 640px) {
+
+  .desktop-responsive-flexbox{
+    width: 100%;
+    margin: auto;
+  }
+
+  .diagram-box {
+  display: none;
+  }
+
+  .chooseRequest-form {
+    width: 100%;
+    max-width: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+  }
+}
+
+@media screen and (max-width: 360px) {
+
+  .diagram-box {
+  display: none;
+  }
+}
+
+@media screen and (min-height: 750px) {
+
+  .desktop-responsive-flexbox{
+    margin: auto;
+  }
+
+  #requestChoice {
+    height: 20vh;
+  }
+}
+
+@media screen and (min-width: 1400px) {
+
+  .ChooseRequest {
+    height: 100vh;
+  }
+
+  .desktop-responsive-flexbox{
+    width: 100%;
+    height: 68vh;
+    margin: 5vh auto 5vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+
+  .diagram-box {
+    width: 35%;
+    margin: 0;
+  }
+
+  .desktop-responsive-form {
+    width: 35%;
+    transform: translateY(2vh);
+  }
+
+  #requestChoice {
+    width: 100%;
+  }
 }
