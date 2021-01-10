@@ -1,5 +1,6 @@
 .offeringpage-global {
   min-height: 100vh;
+  margin: auto;
   position: relative;
   display: flex;
   flex-direction: column;
@@ -13,7 +14,6 @@
   flex-direction: column;
   justify-content: space-between;
   flex: 1;
-
 }
 
 .selectGift {
