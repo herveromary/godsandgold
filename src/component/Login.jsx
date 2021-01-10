@@ -40,9 +40,9 @@ function Login() {
       password: "123456",
       email: "default@email.com",
     };
-    axios.post("http://localhost:3000/api/users", u).then((data) => {
+    axios.post("http://localhost:8080/api/users", u).then((data) => {
       axios
-        .get(`http://localhost:3000/api/users/by_name/${user}`)
+        .get(`http://localhost:8080/api/users/by_name/${user}`)
         .then((response) =>
           localStorage.setItem("user", JSON.stringify(response.data))
         );

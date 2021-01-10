@@ -1,9 +1,11 @@
-import React from "react";
+import React, { useContext } from "react";
+import StepContext from "../StepContext";
 import { NavLink } from "react-router-dom";
 
 import "../styles/css/BottomNav.css";
 
 const BottomNav = ({ path }) => {
+  const { stepRequest } = useContext(StepContext);
   return (
     <div className="fullBar">
       <NavLink
@@ -14,30 +16,48 @@ const BottomNav = ({ path }) => {
         {" "}
         <p className="tab-text">God</p>{" "}
       </NavLink>
-      <NavLink
-        to={(path = "/chooserequest")}
-        className="tab"
-        activeClassName="validTab"
-      >
-        {" "}
-        <p className="tab-text">Request</p>{" "}
-      </NavLink>
-      <NavLink
-        to={(path = "/chooseoffering")}
-        className="tab"
-        activeClassName="validTab"
-      >
-        {" "}
-        <p className="tab-text">Offering</p>{" "}
-      </NavLink>
-      <NavLink
-        to={(path = "/choosepickup")}
-        className="tab"
-        activeClassName="validTab"
-      >
-        {" "}
-        <p className="tab-text">Pick-up</p>{" "}
-      </NavLink>
+      {stepRequest.stepOne ? (
+        <NavLink
+          to={(path = "/chooserequest")}
+          className="tab"
+          activeClassName="validTab"
+        >
+          {" "}
+          <p className="tab-text">Request</p>{" "}
+        </NavLink>
+      ) : (
+        <div className="tab-inactive">
+          <p className="tab-text">Request</p>
+        </div>
+      )}
+      {stepRequest.stepTwo ? (
+        <NavLink
+          to={(path = "/chooserequest")}
+          className="tab"
+          activeClassName="validTab"
+        >
+          {" "}
+          <p className="tab-text">Offering</p>{" "}
+        </NavLink>
+      ) : (
+        <div className="tab-inactive">
+          <p className="tab-text">Offering</p>
+        </div>
+      )}
+      {stepRequest.stepThree ? (
+        <NavLink
+          to={(path = "/chooserequest")}
+          className="tab"
+          activeClassName="validTab"
+        >
+          {" "}
+          <p className="tab-text">Pick-Up</p>{" "}
+        </NavLink>
+      ) : (
+        <div className="tab-inactive">
+          <p className="tab-text">Pick-Up</p>
+        </div>
+      )}
     </div>
   );
 };

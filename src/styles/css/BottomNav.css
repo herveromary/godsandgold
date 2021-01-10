@@ -1,5 +1,6 @@
 .tab {
-  color: var(--red);
+  color: var(--light);
+  background-color: var(--red);
   text-decoration: none;
   border: solid 1px var(--red);
   width: 25vw;
@@ -9,9 +10,21 @@
   vertical-align: middle;
 }
 
+.tab-inactive{
+  color: var(--red);
+  text-decoration: none;
+  border: solid 1px var(--red);
+  width: 25vw;
+  padding: 8px;
+  font-family: "Gelios";
+  font-size: 2em;
+  vertical-align: middle;
+  opacity: 0.7;
+}
+
 .tab:hover {
   color: var(--light);
-  background-color: var(--red);
+  background-color: var(--other-red);
 }
 
 .validTab {

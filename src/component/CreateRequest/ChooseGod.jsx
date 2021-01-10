@@ -1,13 +1,16 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useContext } from "react";
 import { useHistory } from "react-router-dom";
 import axios from "axios";
 import Slider from "react-slick";
 import BottomNav from "../../Reusable/BottomNav";
 import "../../styles/css/ChooseGod.css";
-
+import StepContext from "../../StepContext";
+import gods from "./godsArray";
 import TextTransition, { presets } from "react-text-transition";
+import axios from "axios";
 
 const ChooseGod = () => {
+  const { stepRequest, setStepRequest } = useContext(StepContext);
   const TEXTS = [
     `Hello`,
     "Choose Your God",
@@ -32,6 +35,7 @@ const ChooseGod = () => {
   const [gods, setGods] = useState([]);
 
   const handleClick = (e) => {
+    setStepRequest({ ...stepRequest, stepOne: true });
     const choosenGod = gods.filter((god) => god.name === e.target.alt);
     localStorage.setItem("choosenGod", JSON.stringify(choosenGod[0]));
     history.push("/chooserequest");
